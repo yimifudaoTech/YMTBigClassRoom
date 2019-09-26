@@ -45,7 +45,6 @@ Pod::Spec.new do |s|
   s.dependency 'YMTCloudClassroom'
   s.dependency 'YYModel'
   s.dependency 'AFNetworking'
-  s.dependency 'QMUIKit'
   s.dependency 'Masonry'
   s.dependency 'YYCache'
   s.dependency 'ZFPlayer', '2.1.3'
