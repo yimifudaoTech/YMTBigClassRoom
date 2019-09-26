@@ -1,0 +1,66 @@
+{
+    "domain": {
+        "Server" : {
+            "Sit01": "http://sit01-liveroom.yimifudao.com",
+            "Sit02": "http://sit02-liveroom.yimifudao.com",
+            "Sit03": "http://sit03-liveroom.yimifudao.com",
+            "Sit04": "http://sit04-liveroom.yimifudao.com",
+            "Release": "http://liveroom.yimifudao.com",
+        },
+        "Server1" : {
+            "Sit01": "http://sit04-api.yimifudao.com",
+            "Sit02": "http://sit04-api.yimifudao.com",
+            "Sit03": "http://sit04-api.yimifudao.com",
+            "Sit04": "http://sit04-api.yimifudao.com",
+            "Release": "https://yimifudao.com",
+        },
+        "Local": {
+            "Debug": "http://10.0.40.130:8007",
+            "Release": "http://10.0.40.130:8007",
+        }
+    },
+    "path": {
+        "user_login": {
+            "domain":"Server1",
+            "path":"/v2.4/user/login",
+            "method": "POST",
+            "requestSerializer": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        "get_IpList": {
+            "domain":"Server",
+            "path":"/v1.0.0/openapi/app/getIpList",
+            "method": "POST",
+            "requestSerializer": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        "agora_domain": {
+            "domain":"Server",
+            "path":"/v1.0.0/openapi/app/agora/domain",
+            "method": "POST",
+            "requestSerializer": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        "enter_room": {
+            "domain":"Server",
+            "path":"/v1.0.0/openapi/app/enter/room",
+            "method": "POST",
+            "requestSerializer": "application/json"
+        },
+        "notice_class": {
+            "domain":"Server",
+            "path":"/v1.0.0/marketing/app/api/s/notice/class",
+            "method": "GET",
+            "requestSerializer": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        "user_register": {
+            "domain":"Server",
+            "path":"/user/userRegister",
+            "method": "POST",
+            "requestSerializer": "application/json"
+        },
+        "play_back": {
+            "domain":"Server",
+            "path":"/v1.0.0/openapi/app/playback",
+            "method": "POST",
+        }
+    }
+}
+

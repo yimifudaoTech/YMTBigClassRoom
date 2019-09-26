@@ -1,0 +1,27 @@
+#use_frameworks!
+
+source 'ssh://gerrit.ymfd.corp:29418/YMSpecs'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+
+target 'YMTCloudClassroom_Example' do
+  pod 'YMTBigClassRoom', :path => '../'
+
+  pod 'QMUIKit'
+  pod 'IQKeyboardManager'
+  pod 'AFNetworking'
+  pod 'WoodPeckeriOS', :configurations => ['Debug']
+  pod 'ReactiveObjC'
+  pod 'coobjc'
+  pod 'PINCache'
+  pod 'YYModel'
+  pod 'SDWebImage'
+  pod 'Masonry'
+  pod 'YMFlow', :git=>"https://github.com/SendomLog/YMFlow.git"
+  
+  target 'YMTCloudClassroom_Tests' do
+    inherit! :search_paths
+
+  end
+end
