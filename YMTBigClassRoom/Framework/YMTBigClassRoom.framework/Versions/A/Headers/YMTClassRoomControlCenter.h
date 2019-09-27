@@ -23,7 +23,7 @@
 @class YMBigClassViewForGroupRoom;
 @class SCAgoraDomainModel;
 @class GPLSCEntityDatas;
-@class SCServerIpModel;
+@class YMTSCServerIpModel;
 @class YMTSCSendMsgEntity;
 
 @protocol YMTClassRoomControlCenterDelegate;
@@ -247,7 +247,7 @@ typedef NS_ENUM(NSInteger,YMTControlCenterConnectResult) {
  @param connectResult 连接状态
  */
 - (void)controlCenter:(YMTClassRoomControlCenter *)controlCenter
-       connectModel:(SCServerIpModel *)connectModel
+       connectModel:(YMTSCServerIpModel *)connectModel
       connectResult:(YMTControlCenterConnectResult)connectResult;
 
 /**
@@ -257,7 +257,7 @@ typedef NS_ENUM(NSInteger,YMTControlCenterConnectResult) {
  @param connectModel 重连IP
  */
 - (void)controlCenter:(YMTClassRoomControlCenter *)controlCenter
-  reportReconnectIp:(SCServerIpModel *)connectModel;
+  reportReconnectIp:(YMTSCServerIpModel *)connectModel;
 
 @end
 
