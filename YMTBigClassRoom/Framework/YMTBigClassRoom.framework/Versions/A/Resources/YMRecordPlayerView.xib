@@ -60,7 +60,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngr-aA-ThW">
-                    <rect key="frame" x="0.0" y="325" width="667" height="50"/>
+                    <rect key="frame" x="0.0" y="305" width="667" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExA-Nv-YDJ">
                             <rect key="frame" x="65" y="14" width="73" height="22"/>
@@ -104,11 +104,11 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.75" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="ExA-Nv-YDJ" secondAttribute="bottom" constant="14" id="0j6-6h-8Pt"/>
-                        <constraint firstAttribute="bottom" secondItem="nov-9T-RfN" secondAttribute="bottom" constant="14" id="4YE-6F-H9M"/>
-                        <constraint firstAttribute="bottom" secondItem="Jf6-pU-s29" secondAttribute="bottom" constant="10" id="E3L-zb-86g"/>
-                        <constraint firstAttribute="height" constant="50" id="Jy9-ze-D1L"/>
-                        <constraint firstAttribute="bottom" secondItem="ftz-l4-kP1" secondAttribute="bottom" constant="7" id="QYg-gp-4SY"/>
+                        <constraint firstAttribute="bottom" secondItem="ExA-Nv-YDJ" secondAttribute="bottom" constant="34" id="0j6-6h-8Pt"/>
+                        <constraint firstAttribute="bottom" secondItem="nov-9T-RfN" secondAttribute="bottom" constant="34" id="4YE-6F-H9M"/>
+                        <constraint firstAttribute="bottom" secondItem="Jf6-pU-s29" secondAttribute="bottom" constant="30" id="E3L-zb-86g"/>
+                        <constraint firstAttribute="height" constant="70" id="Jy9-ze-D1L"/>
+                        <constraint firstAttribute="bottom" secondItem="ftz-l4-kP1" secondAttribute="bottom" constant="27" id="QYg-gp-4SY"/>
                         <constraint firstAttribute="trailing" secondItem="nov-9T-RfN" secondAttribute="trailing" constant="20" id="TiV-BP-p5I"/>
                         <constraint firstItem="ExA-Nv-YDJ" firstAttribute="top" secondItem="Ngr-aA-ThW" secondAttribute="top" constant="14" id="Wft-bu-m4y"/>
                         <constraint firstItem="nov-9T-RfN" firstAttribute="leading" secondItem="Jf6-pU-s29" secondAttribute="trailing" constant="20" id="ZzJ-bi-fYl"/>
