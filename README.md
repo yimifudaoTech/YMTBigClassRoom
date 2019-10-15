@@ -17,12 +17,12 @@ YMTCloudClassroom is available through [CocoaPods](https://cocoapods.org). To in
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'YMTBigClassRoom', :git => 'https://github.com/SendomLog/YMTBigClassRoom.git'
+pod 'YMTBigClassRoom', :git => 'https://github.com/yimifudaoTech/YMTBigClassRoom.git'
 ```
 
 ## Author
 
-zhangqian, qian.zhang@yimifudao.com
+xiangping, ping.xiang@yimifudao.com
 
 ## License
 
