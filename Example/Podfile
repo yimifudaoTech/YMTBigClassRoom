@@ -6,7 +6,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 target 'YMTCloudClassroom_Example' do
-  pod 'YMTBigClassRoom', :path => '../'
 
   pod 'QMUIKit'
   pod 'IQKeyboardManager'
@@ -18,7 +17,10 @@ target 'YMTCloudClassroom_Example' do
   pod 'YYModel'
   pod 'SDWebImage'
   pod 'Masonry'
-  pod 'YMFlow', :git=>"https://github.com/SendomLog/YMFlow.git"
+
+  pod 'YMTBigClassRoom', :git => 'https://github.com/yimifudaoTech/YMTBigClassRoom.git'
+  pod 'YMTCloudClassroom', :git => 'https://github.com/yimifudaoTech/YMTCloudClassroom'
+  pod 'YMFlow', :git => 'https://github.com/yimifudaoTech/YMFlow'
   
   target 'YMTCloudClassroom_Tests' do
     inherit! :search_paths
