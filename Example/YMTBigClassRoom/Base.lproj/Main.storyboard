@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eIT-cS-Efq">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Entry Room View Controller-->
+        <scene sceneID="X3Z-pv-BOF">
+            <objects>
+                <viewController storyboardIdentifier="YMTEntryRoomViewController" id="eIT-cS-Efq" customClass="YMTEntryRoomViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dnq-X5-gc7"/>
+                        <viewControllerLayoutGuide type="bottom" id="k0f-dz-B2j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="raG-ys-tjc">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roomnum-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ku6-nZ-HoW">
+                                <rect key="frame" x="407" y="224" width="210" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="1Y1-Mj-Yze"/>
+                                    <constraint firstAttribute="height" constant="36" id="TBz-Ze-cyW"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入房间号：" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vi9-fF-C35" customClass="QMUITextField">
+                                <rect key="frame" x="79" y="284" width="876" height="50"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WCj-nL-Tpq"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.33333333333333331" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="eIT-cS-Efq" id="gcv-Th-aI6"/>
+                                </connections>
+                            </textField>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="roomnum-bg" translatesAutoresizingMaskIntoConstraints="NO" id="5zA-5t-akx">
+                                <rect key="frame" x="820" y="600" width="204" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入groupid：" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Yb-Ba-BwD" customClass="QMUITextField">
+                                <rect key="frame" x="79" y="416" width="876" height="50"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.33333333329999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="eIT-cS-Efq" id="tEx-ct-7Vf"/>
+                                </connections>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="录播参数:userid" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3d-y4-7RH">
+                                <rect key="frame" x="169" y="589" width="129.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="360022260636979200" borderStyle="roundedRect" placeholder="录播参数:roomid" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lJV-aa-aMY">
+                                <rect key="frame" x="169" y="633" width="123" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="环境切换" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7QY-xy-uY4">
+                                <rect key="frame" x="20" y="25" width="86" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入uid：" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CRG-Vh-f03" customClass="QMUITextField">
+                                <rect key="frame" x="79" y="350" width="876" height="50"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.33333333329999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="eIT-cS-Efq" id="pfI-3G-tj2"/>
+                                </connections>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-LG-tUV">
+                                <rect key="frame" x="79" y="488" width="876" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9MH-kU-pIs">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="切换环境" backgroundImage="envchange">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="envChangeAction:" destination="eIT-cS-Efq" eventType="touchUpInside" id="MiQ-zK-Yi2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeI-4s-Cv0">
+                                        <rect key="frame" x="355" y="0.0" width="166" height="50"/>
+                                        <state key="normal" title="进入教室" backgroundImage="entryroom">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="entryAction:" destination="eIT-cS-Efq" eventType="touchUpInside" id="TSh-3c-fI0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LtX-Cc-tjj">
+                                        <rect key="frame" x="710" y="0.0" width="166" height="50"/>
+                                        <state key="normal" title="查看录播" backgroundImage="lubo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recordedButton:" destination="eIT-cS-Efq" eventType="touchUpInside" id="unx-w7-wJ2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vi9-fF-C35" firstAttribute="leading" secondItem="raG-ys-tjc" secondAttribute="leading" constant="79" id="0mf-wx-gOH"/>
+                            <constraint firstItem="6Yb-Ba-BwD" firstAttribute="leading" secondItem="Vi9-fF-C35" secondAttribute="leading" id="95n-TP-m9P"/>
+                            <constraint firstItem="6Yb-Ba-BwD" firstAttribute="height" secondItem="Vi9-fF-C35" secondAttribute="height" id="D6B-hv-lyK"/>
+                            <constraint firstItem="sWj-LG-tUV" firstAttribute="trailing" secondItem="6Yb-Ba-BwD" secondAttribute="trailing" id="IaK-8l-f6V"/>
+                            <constraint firstItem="ku6-nZ-HoW" firstAttribute="centerX" secondItem="raG-ys-tjc" secondAttribute="centerX" id="KoV-Y8-nZH"/>
+                            <constraint firstItem="sWj-LG-tUV" firstAttribute="leading" secondItem="6Yb-Ba-BwD" secondAttribute="leading" id="NrF-TK-Xg5"/>
+                            <constraint firstItem="ku6-nZ-HoW" firstAttribute="top" secondItem="Dnq-X5-gc7" secondAttribute="bottom" constant="25" id="QyM-e3-Pu5">
+                                <variation key="heightClass=regular-widthClass=regular" constant="224"/>
+                            </constraint>
+                            <constraint firstItem="CRG-Vh-f03" firstAttribute="height" secondItem="Vi9-fF-C35" secondAttribute="height" id="SbG-pZ-rPw"/>
+                            <constraint firstItem="CRG-Vh-f03" firstAttribute="trailing" secondItem="Vi9-fF-C35" secondAttribute="trailing" id="WYu-O4-2zP"/>
+                            <constraint firstItem="CRG-Vh-f03" firstAttribute="leading" secondItem="Vi9-fF-C35" secondAttribute="leading" id="ZZp-lW-jqA"/>
+                            <constraint firstAttribute="trailing" secondItem="Vi9-fF-C35" secondAttribute="trailing" constant="69" id="bPJ-Sw-UbZ"/>
+                            <constraint firstItem="CRG-Vh-f03" firstAttribute="top" secondItem="Vi9-fF-C35" secondAttribute="bottom" constant="16" id="bf9-xh-b8i"/>
+                            <constraint firstItem="6Yb-Ba-BwD" firstAttribute="top" secondItem="CRG-Vh-f03" secondAttribute="bottom" constant="16" id="i7q-2N-1cz"/>
+                            <constraint firstItem="Vi9-fF-C35" firstAttribute="top" secondItem="ku6-nZ-HoW" secondAttribute="bottom" constant="24" id="pP0-VS-Sbb"/>
+                            <constraint firstItem="sWj-LG-tUV" firstAttribute="height" secondItem="6Yb-Ba-BwD" secondAttribute="height" id="rUO-cN-RIK"/>
+                            <constraint firstItem="6Yb-Ba-BwD" firstAttribute="trailing" secondItem="Vi9-fF-C35" secondAttribute="trailing" id="sS1-sp-wwK"/>
+                            <constraint firstItem="sWj-LG-tUV" firstAttribute="top" secondItem="6Yb-Ba-BwD" secondAttribute="bottom" constant="22" id="utK-90-UvQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="envChangeButton" destination="9MH-kU-pIs" id="u5W-oy-fgl"/>
+                        <outlet property="envInputTextField" destination="7QY-xy-uY4" id="Pgi-Fz-1FE"/>
+                        <outlet property="groupidtextfield" destination="6Yb-Ba-BwD" id="m8F-Z0-wxd"/>
+                        <outlet property="numTextField" destination="Vi9-fF-C35" id="a60-hi-oi6"/>
+                        <outlet property="roomidTextField" destination="lJV-aa-aMY" id="yfU-gS-X8a"/>
+                        <outlet property="uidtextfield" destination="CRG-Vh-f03" id="3Fo-fw-ppz"/>
+                        <outlet property="useridTextField" destination="s3d-y4-7RH" id="boc-mt-sNe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oxo-mf-wpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953.07346326836591" y="420"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="entryroom" width="166" height="50"/>
+        <image name="envchange" width="166" height="50"/>
+        <image name="lubo" width="166" height="50"/>
+        <image name="roomnum-bg" width="204" height="168"/>
+        <image name="roomnum-logo" width="210" height="36"/>
+    </resources>
+</document>
