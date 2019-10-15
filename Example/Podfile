@@ -23,8 +23,8 @@ target 'YMTBigClassRoom_Example' do
 #  pod 'YMTCloudClassroom', :path => '../../YMTCloudClassroom'
 #  pod 'YMFlow', :path => "../../YMFlow"
 
- pod 'YMTCloudClassroom', :git => "https://github.com/SendomLog/YMTCloudClassroom.git"
- pod 'YMFlow', :git => 'https://github.com/SendomLog/YMFlow.git'
+ pod 'YMTCloudClassroom', :git => "https://github.com/yimifudaoTech/YMTCloudClassroom.git"
+ pod 'YMFlow', :git => 'https://github.com/yimifudaoTech/YMFlow.git'
 
   target 'YMTBigClassRoom_Tests' do
     inherit! :search_paths
