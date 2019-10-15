@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
 
   s.description      = '溢米辅导 大班课 SDK'
 
-  s.homepage         = 'http://gerrit.ymfd.corp/#/admin/projects/ios-BigClass'
+  s.homepage         = 'https://github.com/yimifudaoTech/YMTBigClassRoom'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'zhangqian' => 'qian.zhang@yimifudao.com' }
-  s.source           = { :git => 'ssh://zhangqian@gerrit.ymfd.corp:29418/ios-BigClass', :tag => s.version.to_s }
+  s.author           = { 'xiangping' => 'ping.xiang@yimifudao.com' }
+  s.source           = { :git => 'https://github.com/yimifudaoTech/YMTBigClassRoom.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
