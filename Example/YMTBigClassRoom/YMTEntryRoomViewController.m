@@ -8,10 +8,13 @@
 
 #import "YMTEntryRoomViewController.h"
 
+#import "SDSCMineCatalogGOModel.h"
+#import "YMTRoomManagerViewController.h"
 #import <YMTBigClassRoom/YMTHTTPSessionManager.h>
 #import "NSObject+YYModel.h"
 #import <QMUIKit/QMUIKit.h>
 #import <YYModel/NSObject+YYModel.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 #import <YMTBigClassRoom/YMTBigClassSDKManager.h>
 
@@ -26,6 +29,8 @@ static const CGFloat YMTEntryRoomViewControlleriPhoneCornerRadius = 25.0f;
 @property (weak, nonatomic) IBOutlet UIButton *envChangeButton;
 @property (weak, nonatomic) IBOutlet UITextField *useridTextField;
 @property (weak, nonatomic) IBOutlet UITextField *roomidTextField;
+@property (weak, nonatomic) IBOutlet UIButton *enterRoomButton;
+@property (weak, nonatomic) IBOutlet UIButton *recorderButtom;
 
 @end
 
@@ -45,6 +50,31 @@ static const CGFloat YMTEntryRoomViewControlleriPhoneCornerRadius = 25.0f;
     self.numTextField.textInsets = UIEdgeInsetsMake(0, 34, 0, 0);
     self.uidtextfield.textInsets = UIEdgeInsetsMake(0, 34, 0, 0);
     self.groupidtextfield.textInsets = UIEdgeInsetsMake(0, 34, 0, 0);
+    
+    
+    RACSignal<NSNumber *> *roomIDEnable = [self.numTextField.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
+        return @(value.length ? YES : NO);
+    }];
+    
+    RACSignal<NSNumber *> *IDEnable = [self.uidtextfield.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
+        return @(value.length ? YES : NO);
+    }];
+    
+    RACSignal<NSNumber *> *groupIDEnable = [self.groupidtextfield.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
+        return @(value.length ? YES : NO);
+    }];
+    
+    RACSignal<NSNumber *> *enterRoomEnable = [RACSignal combineLatest:@[ roomIDEnable, IDEnable, groupIDEnable ] reduce:^(NSNumber * roomIDEnable, NSNumber *IDEnable, NSNumber *groupIDEnable) {
+        return @(roomIDEnable.boolValue && IDEnable.boolValue && groupIDEnable.boolValue);
+     }];
+    
+    RACSignal<NSNumber *> *recorderEnable = [RACSignal combineLatest:@[roomIDEnable, IDEnable] reduce:^(NSNumber * roomIDEnable, NSNumber *IDEnable) {
+        return @(roomIDEnable.boolValue && IDEnable.boolValue);
+     }];
+    
+    RAC(self.enterRoomButton, enabled) = enterRoomEnable;
+    RAC(self.recorderButtom, enabled) = recorderEnable;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -86,7 +116,7 @@ static const CGFloat YMTEntryRoomViewControlleriPhoneCornerRadius = 25.0f;
     NSString *nickName = [NSString stringWithFormat:@"iOS-%@",self.uidtextfield.text?:@"-"];
     
     [[YMTBigClassSDKManager shareManager] joinCloudRoomWithRoomID:self.numTextField.text userID:self.uidtextfield.text?:@"" groupId:self.groupidtextfield.text?:@""
-                                                          headUrL:@"http://static.yimifudao.com/static-files/user_pics/stu_head_pic/male.png" token:@"nil" userRole:2 nickName:nickName bussinessData:@"" result:^(BOOL success, YMTRoomInfoCode code, UIViewController * _Nullable vc) {
+                                                          headUrL:@"http://static.yimifudao.com/static-files/user_pics/stu_head_pic/male.png" userRole:2 nickName:nickName bussinessData:@"" result:^(BOOL success, YMTRoomInfoCode code, UIViewController * _Nullable vc) {
                                                               [QMUITips hideAllTips];
                                                               if (!success) {
                                                                   [QMUITips showError:@"进入失败"];
@@ -128,9 +158,9 @@ static const CGFloat YMTEntryRoomViewControlleriPhoneCornerRadius = 25.0f;
     }
 
     if (self.numTextField.text.length && self.uidtextfield.text.length) {
-        [[YMTBigClassSDKManager shareManager] recordPlayToken:@"" viewParent:self roomID:self.numTextField.text userid:self.uidtextfield.text];
+        [[YMTBigClassSDKManager shareManager] recordPlayToken:self roomID:self.numTextField.text userid:self.uidtextfield.text];
     }else {
-        [QMUITips showError:@"认真点"];
+        [QMUITips showError:@"请输入相关参数"];
     }
 }
 
