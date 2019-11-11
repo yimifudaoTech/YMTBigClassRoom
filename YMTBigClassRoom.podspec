@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
 
   s.resources = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework/Versions/A/Resources/**'
-  s.vendored_frameworks = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework'
+  s.vendored_frameworks = 'YMTBigClassRoom/Framework/*.framework'
   s.public_header_files = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework/**/*.h'
   
   s.static_framework = true
@@ -50,6 +50,7 @@ Pod::Spec.new do |s|
   s.dependency 'YYCache'
   s.dependency 'ZFPlayer', '2.1.3'
   s.dependency 'SDWebImage', '4.0.0'
+  s.dependency 'Bugly'
   
   s.user_target_xcconfig = { 
     'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)',
