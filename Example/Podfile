@@ -9,22 +9,11 @@ target 'YMTBigClassRoom_Example' do
   pod 'YMTBigClassRoom', :path => '../'
 
   pod 'QMUIKit'
-  pod 'IQKeyboardManager'
-  pod 'AFNetworking'
   pod 'WoodPeckeriOS', :configurations => ['Debug']
   pod 'LookinServer'
   pod 'ReactiveObjC'
   pod 'coobjc'
   pod 'PINCache'
-  pod 'YYModel'
-  pod 'SDWebImage', '4.0.0'
-  pod 'AgoraRtcEngine_iOS','2.3.1'
-  pod 'Masonry'
-#  pod 'YMTCloudClassroom', :path => '../../YMTCloudClassroom'
-#  pod 'YMFlow', :path => "../../YMFlow"
-
- pod 'YMTCloudClassroom', :git => "https://github.com/yimifudaoTech/YMTCloudClassroom.git"
- pod 'YMFlow', :git => 'https://github.com/yimifudaoTech/YMFlow.git'
 
   target 'YMTBigClassRoom_Tests' do
     inherit! :search_paths

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YMTBigClassRoom'
-  s.version          = '0.1.10'
+  s.version          = '0.1.23'
   s.summary          = 'YMT BigClass Room.'
 
 # This description is used to generate tags and improve search results.
@@ -28,8 +28,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.resources = "YMTBigClassRoom/Framework/YMTBigClassRoom.framework/Versions/A/Resources/**"
-  s.vendored_frameworks = "YMTBigClassRoom/Framework/YMTBigClassRoom.framework"
+  s.resources = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework/Versions/A/Resources/**'
+  s.vendored_frameworks = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework'
   s.public_header_files = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework/**/*.h'
   
   s.static_framework = true
@@ -42,13 +42,14 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   
-  s.dependency 'YMTCloudClassroom'
+  s.dependency 'YMTCloudClassroom', '0.1.9'
+  s.dependency 'YMFlow', '0.1.5'
   s.dependency 'YYModel'
   s.dependency 'AFNetworking'
   s.dependency 'Masonry'
   s.dependency 'YYCache'
   s.dependency 'ZFPlayer', '2.1.3'
-  s.dependency 'SDWebImage'
+  s.dependency 'SDWebImage', '4.0.0'
   
   s.user_target_xcconfig = { 
     'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)',
