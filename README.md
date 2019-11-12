@@ -27,9 +27,7 @@
 ```
 platform :ios, '9.0' use_frameworks!
 target 'Your App' do
- pod 'YMTBigClassRoom', :git => 'https://github.com/SendomLog/YMTBigClassRoom.git'
- pod 'YMTCloudClassroom', :git => 'https://github.com/yimifudaoTech/YMTCloudClassroom'
- pod 'YMFlow', :git => 'https://github.com/yimifudaoTech/YMFlow'
+ pod 'YMTBigClassRoom', '0.1.23'
 end
 ```
 4. 在 Terminal 内运行 pod update 命令更新本地库版本。
