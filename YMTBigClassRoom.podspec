@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.resources = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework/Versions/A/Resources/**'
   s.vendored_frameworks = 'YMTBigClassRoom/Framework/*.framework'
-  s.public_header_files = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework/**/*.h'
+  s.public_header_files = 'YMTBigClassRoom/YMTBigClassRoom.framework/Headers/*.h'
   
   s.static_framework = true
    

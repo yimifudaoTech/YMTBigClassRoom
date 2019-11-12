@@ -19,12 +19,10 @@
 
 static const CGFloat YMTEntryRoomViewControlleriPhoneCornerRadius = 25.0f;
 static NSString * const YMTUserDefaultKey_LessonId = @"YMTUserDefaultKey_LessonId";
-#define APP_ID_JUREN @"7169a6c5ab5b4eeba2ca37b831fb9239"
-#define APP_KEY_JUREN @"fTvEfrTdSsP3uqZj"
 
 // 精锐1v1
-#define APP_ID_JINGRUI @"kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo"
-#define APP_KEY_JINGRUI @"L6X0TIPFLQGkwEKM";
+#define APP_ID_JINGRUI @"";
+#define APP_KEY_JINGRUI @"";
 
 @interface YMTEntryRoomViewController ()
 
@@ -63,7 +61,6 @@ static NSString * const YMTUserDefaultKey_LessonId = @"YMTUserDefaultKey_LessonI
     if(lessonId) {
         self.numTextField.text = lessonId;
     }
-    self.numTextField.text = @"377038947370405888";
     self.versionLabel.text = [NSString stringWithFormat:@"v%@", [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]];
     RACSignal<NSNumber *> *roomIDEnable = [self.numTextField.rac_textSignal map:^id _Nullable(NSString * _Nullable value) {
         return @(value.length ? YES : NO);
@@ -206,11 +203,12 @@ static NSString * const YMTUserDefaultKey_LessonId = @"YMTUserDefaultKey_LessonI
 - (void)initClassRoom {
     NSString *appId = APP_ID_JINGRUI;
     NSString *appKey = APP_KEY_JINGRUI;
-    if(self.classRoomType != 0){
-        appId = APP_ID_JUREN;
-        appKey = APP_KEY_JUREN;
-    }
     [[YMTBigClassSDKManager shareManager]registerSDKWithAppID:appId AppKey:appKey result:^(BOOL success, YMTRoomInfoCode code) {
+        if(code == YMTRoomInfoCodeRoomSecretError) {
+            [QMUITips showInfo:@"请传入溢慧云SDKappId和appKey"];
+        }else if(code == YMTRoomInfoCodeSuccess) {
+            [QMUITips showInfo:@"溢慧云SDK初始化成功"];
+        }
         
     }];
     [[YMTBigClassSDKManager shareManager]enableCrashReport:YES];
