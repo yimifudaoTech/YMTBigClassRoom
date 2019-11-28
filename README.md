@@ -27,7 +27,7 @@
 ```
 platform :ios, '9.0' use_frameworks!
 target 'Your App' do
- pod 'YMTBigClassRoom', '0.1.23'
+ pod 'YMTBigClassRoom', '1.1.1'
 end
 ```
 4. 在 Terminal 内运行 pod update 命令更新本地库版本。
