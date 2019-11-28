@@ -20,6 +20,7 @@ typedef NS_ENUM(NSUInteger, YMSuspendViewType) {
 @interface YMSuspendView : UIView
 @property (nonatomic,assign)YMSuspendViewType type;
 @property (nonatomic,copy) void (^tapBlock)(void);
+@property (nonatomic, copy) void (^multiTapBlock)(void);
 
 /**
  在UIWindow上显示浮动窗口

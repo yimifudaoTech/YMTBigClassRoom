@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YMClassRoomConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

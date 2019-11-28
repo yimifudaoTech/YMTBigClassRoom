@@ -15,4 +15,6 @@
 #define APP_ID_JINGRUI @"kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo"
 #define APP_KEY_JINGRUI @"L6X0TIPFLQGkwEKM";
 
+#define YMClassRoomSDKVersion @"0.1.1"
+
 #endif /* YMClassRoomConfig_h */

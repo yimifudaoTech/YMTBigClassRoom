@@ -117,6 +117,14 @@ typedef NS_ENUM(NSInteger,YMTControlCenterConnectResult) {
 @interface YMTClassRoomControlCenter (WhiteBoard)
 
 - (void)setWhiteBoardEnable:(BOOL)enable;
+
+
+/**
+ 隐藏绘制层
+ @param isHiden 是否隐藏绘制层
+ */
+- (void)hideDrawLayer:(BOOL)isHiden;
+
 /// 选择白板行为类型
 - (void)setWhiteBoardToolType:(YMDrawToolType)type;
 /// 设置线段宽度

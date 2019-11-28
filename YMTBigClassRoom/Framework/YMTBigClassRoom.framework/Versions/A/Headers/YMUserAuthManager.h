@@ -21,11 +21,13 @@ typedef void(^YMUserAuthChangeBlock)(NSString *uid);
 
 - (void)addInitAuths:(NSArray *)initAuths withUid:(NSString *)uid;
 
+- (void)appendAuths:(NSArray *)auths withUid:(NSString *)uid;
+
 - (void)refreshUserAuth:(YMAuthCommand *)command;
 
 - (void)setUserAuthStatus:(YMUserAuthStatus)status withUid:(NSString *)uid;
 
-- (void)clearUserAuth:(NSString *)uid;
+- (void)resetUserAuth:(NSString *)uid withAuthStatus:(YMUserAuthStatus)status withInitAuths:(NSArray *)initAuths;
 
 - (void)clearAllUserAuth;
 

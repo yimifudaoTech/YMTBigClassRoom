@@ -14,6 +14,20 @@
             "Sit04": "http://sit04-api.yimifudao.com",
             "Release": "https://yimifudao.com",
         },
+        "ServerGalaxy" : {
+            "Sit01": "https://galaxy-bp-prod.yimifudao.com/buryPoint/ios",
+            "Sit02": "https://galaxy-bp-prod.yimifudao.com/buryPoint/ios",
+            "Sit03": "https://galaxy-bp-prod.yimifudao.com/buryPoint/ios",
+            "Sit04": "https://galaxy-bp-prod.yimifudao.com/buryPoint/ios",
+            "Release": "https://galaxy-burypoint-pb.yimifudao.com/buryPoint/ios",
+        },
+        "ServerOSSSupport" : {
+            "Sit01": "http://sit01-platform.yimifudao.com",
+            "Sit02": "http://sit02-platform.yimifudao.com",
+            "Sit03": "http://sit03-platform.yimifudao.com",
+            "Sit04": "http://sit04-platform.yimifudao.com",
+            "Release": "https://platform.yimifudao.com",
+        },
         "Local": {
             "Debug": "http://10.0.40.130:8007",
             "Release": "http://10.0.40.130:8007",
@@ -67,6 +81,19 @@
             "method": "POST",
             "requestSerializer": "application/json"
         },
+        "SendGalaxy": {
+            "domain":"ServerGalaxy",
+            "path":"",
+            "method": "POST",
+            "requestSerializer": "application/json"
+        },
+        "get_oss_support": {
+            "domain":"ServerOSSSupport",
+            "path":"/v1.0.0/erp/support/oss/security",
+            "method": "GET",
+            "requestSerializer": "application/json"
+        },
+        
     }
 }
 

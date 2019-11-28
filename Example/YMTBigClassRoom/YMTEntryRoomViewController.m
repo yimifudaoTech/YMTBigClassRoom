@@ -204,9 +204,9 @@ static NSString * const YMTUserDefaultKey_LessonId = @"YMTUserDefaultKey_LessonI
     NSString *appId = APP_ID_JINGRUI;
     NSString *appKey = APP_KEY_JINGRUI;
     [[YMTBigClassSDKManager shareManager]registerSDKWithAppID:appId AppKey:appKey result:^(BOOL success, YMTRoomInfoCode code) {
-        if(code == YMTRoomInfoCodeRoomSecretError) {
+        if(code == YMRoomErrorCode_MethodCall_Bad_Parameters) {
             [QMUITips showInfo:@"请传入溢慧云SDKappId和appKey"];
-        }else if(code == YMTRoomInfoCodeSuccess) {
+        }else if(code == YMRoomErrorCode_MethodCall_Success) {
             [QMUITips showInfo:@"溢慧云SDK初始化成功"];
         }
         

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YMTHTTPURLModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -37,6 +38,8 @@ typedef id _Nullable (^YMTHTTPSessionManagerResultModify)(id _Nullable object, N
                                   result:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject, NSError *error))result;
 
 - (void)changeEnv:(NSString *)envStr;
+
+- (YMTHTTPURLModel *)modifyURL:(NSString *)URLString ;
 
 @end
 

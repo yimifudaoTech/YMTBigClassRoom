@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -143,6 +141,13 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="加载音视频课件"/>
                         </button>
+                        <button opaque="NO" tag="93110" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trP-HH-wZP">
+                            <rect key="frame" x="91" y="249" width="92" height="30"/>
+                            <state key="normal" title="课件滚动缩放"/>
+                            <connections>
+                                <action selector="commandBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="qPl-We-iY5"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -152,6 +157,7 @@
                         <constraint firstItem="l9k-X6-Z0t" firstAttribute="top" secondItem="J3o-oR-xZ9" secondAttribute="bottom" constant="15" id="DZQ-2W-O1d"/>
                         <constraint firstItem="Hp3-n0-QXm" firstAttribute="centerY" secondItem="fL8-Xu-mxy" secondAttribute="centerY" id="J5b-fH-0eO"/>
                         <constraint firstItem="Igt-Kw-ik2" firstAttribute="leading" secondItem="l9k-X6-Z0t" secondAttribute="trailing" constant="15" id="PVz-04-KfD"/>
+                        <constraint firstItem="trP-HH-wZP" firstAttribute="centerY" secondItem="8z4-t9-ZVQ" secondAttribute="centerY" id="RHK-iA-AD6"/>
                         <constraint firstItem="J3o-oR-xZ9" firstAttribute="leading" secondItem="aEU-Ue-GHc" secondAttribute="leading" constant="15" id="Rph-G6-Mk5"/>
                         <constraint firstItem="fL8-Xu-mxy" firstAttribute="leading" secondItem="Ayf-du-7Bf" secondAttribute="leading" id="TkF-0x-DO0"/>
                         <constraint firstItem="Lo5-yq-muw" firstAttribute="leading" secondItem="kyL-b6-YtC" secondAttribute="trailing" constant="18" id="V2w-qC-aYE"/>
@@ -168,6 +174,7 @@
                         <constraint firstItem="l9k-X6-Z0t" firstAttribute="leading" secondItem="J3o-oR-xZ9" secondAttribute="leading" id="nKT-8s-zY0"/>
                         <constraint firstItem="Ayf-du-7Bf" firstAttribute="top" secondItem="l9k-X6-Z0t" secondAttribute="bottom" constant="15" id="oi5-7G-H3a"/>
                         <constraint firstItem="Lo5-yq-muw" firstAttribute="top" secondItem="kyL-b6-YtC" secondAttribute="top" id="rFP-ah-Win"/>
+                        <constraint firstItem="trP-HH-wZP" firstAttribute="leading" secondItem="8z4-t9-ZVQ" secondAttribute="trailing" constant="14" id="rKi-mj-bAi"/>
                         <constraint firstItem="BWj-ZH-3aJ" firstAttribute="leading" secondItem="aEU-Ue-GHc" secondAttribute="leading" constant="15" id="trO-ax-yL6"/>
                         <constraint firstItem="8z4-t9-ZVQ" firstAttribute="top" secondItem="fL8-Xu-mxy" secondAttribute="bottom" constant="15" id="ub2-EN-V6v"/>
                         <constraint firstItem="J3o-oR-xZ9" firstAttribute="top" secondItem="aEU-Ue-GHc" secondAttribute="top" constant="60" id="w2n-hc-3AM"/>
@@ -185,6 +192,7 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="132" y="148"/>
         </view>
     </objects>
 </document>

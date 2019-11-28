@@ -59,6 +59,9 @@ typedef NS_ENUM(NSInteger, YMTGroupRoomViewOperation) {
 - (void)scrolltoPercent:(CGFloat)percent;
 - (void)zoomEvent:(NSDictionary *)config;
 
+// 课件滚动控制
+- (void)scrollToOffset:(double)offset;
+
 - (YMBigClassViewForGroupRoom *)groupRoomViewWithKey:(NSString *)key;
 
 @end
