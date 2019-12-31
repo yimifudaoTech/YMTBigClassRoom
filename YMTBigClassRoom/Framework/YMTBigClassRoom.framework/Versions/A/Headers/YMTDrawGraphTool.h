@@ -7,16 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GPLDrawView.h"
+#import "YMTDrawView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YMTDrawGraphTool : NSObject
 
 
-+ (void)showDrawGraphView:(GPLDrawViewType)type image:(UIImage * _Nullable)drawImage onView:(UIView *)view contentSize:(CGSize)contentSize contentOffset:(CGPoint)offset completionHandler:(void (^)(BOOL confirmed, NSDictionary *contentDic))completionHandler;
++ (void)showDrawGraphView:(YMTDrawViewType)type image:(UIImage * _Nullable)drawImage onView:(UIView *)view contentSize:(CGSize)contentSize contentOffset:(CGPoint)offset selectedPoint:(CGPoint)selectedPoint completionHandler:(void (^)(BOOL confirmed, NSDictionary *contentDic))completionHandler;
 
-+ (void)showDrawGraphView:(GPLDrawViewType)type image:(UIImage * _Nullable)drawImage convertRect:(CGRect)convertRect contentSize:(CGSize)contentSize contentOffset:(CGPoint)offset completionHandler:(void (^)(BOOL confirmed, NSDictionary *contentDic))completionHandler;
++ (void)showDrawGraphView:(YMTDrawViewType)type image:(UIImage * _Nullable)drawImage convertRect:(CGRect)convertRect contentSize:(CGSize)contentSize contentOffset:(CGPoint)offset selectedPoint:(CGPoint)selectedPoint completionHandler:(void (^)(BOOL confirmed, NSDictionary *contentDic))completionHandler;
 
 
 @end

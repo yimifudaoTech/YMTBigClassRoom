@@ -8,36 +8,33 @@
 #import <UIKit/UIKit.h>
 #import "YMClassRoomProtocol.h"
 #import "YMTClassRoomControlCenter.h"
-#import "SDSCMineCatalogGOModel.h"
+#import "YMRoomModel.h"
 #import <YMTCloudClassroom/YMTChatModule.h>
 #import <YMTCloudClassroom/YMTSideButtonbar.h>
 #import <YMTCloudClassroom/YMTTopBar.h>
 #import <YMTCloudClassroom/YMTIMModule.h>
-#import "YMTAudioVideoControlCenter.h"
-#import "YMMediaPlayerControllerCenter.h"
 #import "YMCourseWindowView.h"
 #import "YMCursorView.h"
 #import "YMClassRoomLifeCycle.h"
+#import "YMBaseControlCenter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @class YMUserAuthManager;
 
-static NSString * const YimiFudaoNewVerdorKey = @"6bdd1aedee814f1fade7ef5e42578ff7";
 
 @interface YMBaseClassRoomViewController : UIViewController <YMClassRoomProtocol, YMClassRoomLifeCycleDelegate, YMClassRoomLifeCycleProtocol>
-@property (strong, nonatomic) SDSCMineGoAgoraRoomModel *roomModel;
-@property (nonatomic, strong) YMTAudioVideoControlCenter *audioVideoControlCenter;
-@property (nonatomic, strong) YMMediaPlayerControllerCenter *mediaPlayControlCenter;
+@property (strong, nonatomic) YMRoomModel *roomModel;
 @property (nonatomic, strong) YMTChatModule *chatModule;
 @property (nonatomic, strong) YMTSideButtonbar *sideButtonbar;
 @property (nonatomic, strong) YMTTopBar *topBar;
 @property (nonatomic, strong) UIView *blackBoardView;
 @property (nonatomic, strong) YMCourseWindowView *avCourseWareWindow;
-/// 控制中心
-@property (nonatomic, strong, readwrite) YMTClassRoomControlCenter *controlCenter;
 
-@property (nonatomic, strong) YMUserAuthManager *userAuthManager;
+/// 控制中心
+@property (nonatomic, strong) YMBaseControlCenter *controlCenter;
+/// 音视频课件播放控制器
+@property (nonatomic, strong) YMMediaPlayerControllerCenter *mediaPlayControlCenter;
 
 @property (nonatomic, assign) CGFloat kWidth;
 @property (nonatomic, assign) CGFloat kHeight;
@@ -54,8 +51,6 @@ static NSString * const YimiFudaoNewVerdorKey = @"6bdd1aedee814f1fade7ef5e42578f
 @property (nonatomic ,strong) YMCursorView * cursorView;
 
 @property (nonatomic, strong) YMClassRoomLifeCycle *roomLifeCycle;
-
-- (void)initUserAuthManager;
 
 - (void)setUpSideButtonBar;
 
@@ -75,6 +70,8 @@ static NSString * const YimiFudaoNewVerdorKey = @"6bdd1aedee814f1fade7ef5e42578f
 
 - (void)hideAVCourseWareView;
 
+- (void)setUpChatView;
+
 - (void)showChatView;
 
 - (void)hideChatView;
@@ -84,10 +81,6 @@ static NSString * const YimiFudaoNewVerdorKey = @"6bdd1aedee814f1fade7ef5e42578f
 - (void)drawTrail:(NSString *)boardId withTrailModel:(YMDrawTrailModel *)model withUid:(NSString *)uid withDocId:(NSString *)docId;
 
 - (void)processCommand:(YMTSCSendMsgEntity *)context isRealTime:(BOOL)isRealTime;
-
-- (YMTAudioVideoControlCenter *)createAudioVideoControlCenter;
-
-- (void)onUserEnter:(NSUInteger)uid;
 
 - (void)sideBarButtonDidClicked:(UIButton *)sender type:(YMTSideButtonType)buttonType;
 

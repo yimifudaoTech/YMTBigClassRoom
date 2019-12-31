@@ -7,7 +7,6 @@
 
 // 获取系统相册照片
 #import <Foundation/Foundation.h>
-#import <AssetsLibrary/AssetsLibrary.h>
 #import <Photos/Photos.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -30,8 +29,8 @@ typedef void(^photoGroupCallBack)(NSArray* photoGroups);
  获取系统的所有照片不分组
  */
 - (void)getAllPHAssetFromAlbum:(void(^)(NSMutableArray * phassets))allPhassetCallback;
-- (void)getShowImageSize:(CGSize)size PHAsset:(PHAsset *)asset imgCallBack:(void(^)(UIImage * img))imgCallBack;
-
+- (void)getShowImageSize:(CGSize)targetSize PHAsset:(PHAsset *)asset resultHandler:(void(^)(UIImage * image))resultHandler;
+- (void)getImageWithCachingImageManager:(PHCachingImageManager *)imageManager phAsset:(PHAsset *)asset targetSize:(CGSize)targetSize resultHandler:(void(^)(UIImage * image))resultHandler;
 /**
  选择的照片 PHAsset
  */

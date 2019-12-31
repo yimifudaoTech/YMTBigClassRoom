@@ -6,11 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HSUserAuth.h"
 #import "YMAuthCommand.h"
-
-NS_ASSUME_NONNULL_BEGIN
-
+#import "YMUserAuth.h"
 
 
 typedef void(^YMUserAuthChangeBlock)(NSString *uid);
@@ -40,5 +37,3 @@ typedef void(^YMUserAuthChangeBlock)(NSString *uid);
 - (BOOL)isUserAuthSaved:(NSString *)uid;
 
 @end
-
-NS_ASSUME_NONNULL_END

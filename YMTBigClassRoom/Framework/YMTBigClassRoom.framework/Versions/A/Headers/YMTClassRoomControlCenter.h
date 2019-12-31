@@ -10,37 +10,14 @@
 
 
 #import <YMTCloudClassroom/YMWhiteBoardModule.h>
-//#import <YMWhiteBoard/XYZDrawTool.h>
-//#import <YMWhiteBoard/XYDrawLayer.h>
-//#import <XYZRoom/XYZRoomProtocols.h>
-//#import <YMWhiteBoard/XYZCursorView.h>
-
 #import <YMTCloudClassroom/YMTSCServerHeader.h>
 #import <YMTCloudClassroom/YMTCourseWareModel.h>
 #import <YMTCloudClassroom/YMTRoomProtocols.h>
 
 @class XYCourseWareLayer;
 @class YMBigClassViewForGroupRoom;
-@class SCAgoraDomainModel;
-@class GPLSCEntityDatas;
-@class YMTSCServerIpModel;
-@class YMTSCSendMsgEntity;
-
-@protocol YMTClassRoomControlCenterDelegate;
-
-typedef void(^YMTCCIMModuleCallBlock)(void);
-
-typedef NS_ENUM(NSInteger,YMTControlCenterConnectResult) {
-    YMTControlCenterConnectResultSuccess,    // 链接成功
-    YMTControlCenterConnectResultFail,       // 链接失败
-    YMTControlCenterConnectResultEnd,        // 链接结束
-    YMTControlCenterConnectResultRepeat      // 重新链接
-};
 
 @interface YMTClassRoomControlCenter : NSObject
-
-/// classRoom ControlCenter Delegate
-@property (nonatomic, weak, readwrite) id <YMTClassRoomControlCenterDelegate> delegate;
 
 - (void)resetAllClassRoomView;
 
@@ -176,96 +153,6 @@ typedef NS_ENUM(NSInteger,YMTControlCenterConnectResult) {
 - (CGSize)getWhiteBoardZoomSize;
 /// 重新布局zoom
 - (void)whiteBoardZoomLayout;
-
-@end
-
-/// IM相关操作
-
-@interface YMTClassRoomControlCenter (IM)
-
-/// 初始化IM模块
-- (void)IMInitSocketControllerWithDNSIPList:(NSArray *)dnsIPList domain:(SCAgoraDomainModel *)domain liveRoomID:(NSString *)liveRoomID uid:(NSString *)uid;
-
-/// 销毁IM模块
-- (void)IMdestroy;
-
-/// 获取当前使用的IP
-- (NSString *)IMGetCurrentIP;
-
-//TODO:???
-- (void)IMstartTimeOut:(YMTCCIMModuleCallBlock)callBack;
-
-/// 发送消息至server
-- (void)IMSendSocketContext:(NSDictionary *)sendContext type:(YMTSCCommandConvertType)type;
-
-//TODO:???
-- (void)IMStopTimeOut;
-
-/// 断开链接
-- (void)IMDisconnect;
-
-/// 同步消息
-- (void)IMAsyncSeverDataWithComplete:(void (^)(BOOL isSuccess))completionBlock;
-
-@end
-
-@protocol YMTClassRoomControlCenterDelegate <NSObject>
-
-@required
-
-/**
- 获取服务端消息
- 
- @param controlCenter 管理类
- @param context 消息管理模型。所有数据
- @param isRealTime 实时/同步 消息
- */
-
-- (void)controlCenter:(YMTClassRoomControlCenter *)controlCenter
-            context:(YMTSCSendMsgEntity *)context
-         isRealTime:(BOOL)isRealTime;
-
-
-/**
- 发送的消息服务端已收到
- 
- @param controlCenter 管理类
- @param context 服务端收到的消息
- */
-- (void)controlCenter:(YMTClassRoomControlCenter *)controlCenter
-    realSendContext:(YMTSCSendMsgEntity *)context;
-
-
-/**
- 同步回调
- 
- @param controlCenter 管理类
- @param isSyncDone 是否同步完成
- */
-- (void)controlCenter:(YMTClassRoomControlCenter *)controlCenter
-         isSyncDone:(BOOL)isSyncDone;
-
-@optional
-
-/**
- 连接状态变化
- 
- @param controlCenter 管理类
- @param connectModel 当前IP
- @param connectResult 连接状态
- */
-- (void)controlCenter:(YMTClassRoomControlCenter *)controlCenter
-       connectModel:(YMTSCServerIpModel *)connectModel
-      connectResult:(YMTControlCenterConnectResult)connectResult;
-
-/**
- 重连IP上报
- 
- @param controlCenter 管理类
- @param connectModel 重连IP
- */
-- (void)controlCenter:(YMTClassRoomControlCenter *)controlCenter
-  reportReconnectIp:(YMTSCServerIpModel *)connectModel;
 
 @end
 

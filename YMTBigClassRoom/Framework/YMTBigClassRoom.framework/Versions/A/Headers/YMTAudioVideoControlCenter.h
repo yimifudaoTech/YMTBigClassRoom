@@ -12,6 +12,8 @@
 #import <YMTCloudClassroom/YMTLiveFrameView.h>
 #import <YMTCloudClassroom/YMLiveFrameView.h>
 #import <YMTCloudClassroom/YMLIveFrameViewProtocol.h>
+#import "YMRoomModel.h"
+#import "YMUserAuthManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +21,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,weak) id<YMLiveModuleDelegate> delegate;
 @property (nonatomic, strong) id<YMLIveFrameViewProtocol> liveView;
+@property (nonatomic, strong) YMRoomModel *roomModel;
+@property (nonatomic, assign) YMLiveUserType currentUserType;
+@property (nonatomic, assign) BOOL isInRoom;
+@property (nonatomic, strong) YMUserAuthManager *userAuthManager;
+
 
 - (id<YMLIveFrameViewProtocol>)getAudioVeideoView;
 
@@ -26,8 +33,6 @@ NS_ASSUME_NONNULL_BEGIN
  刷新某个子view的状态
  */
 - (void)refreshFrameChildViewWithUid:(NSUInteger)uid config:(NSDictionary *)config;
-
-- (UIView *)childViewForUid:(NSUInteger)uid;
 
 - (void)refreshChildViewForUserEnter:(NSInteger)uid userRole:(YMLiveRoleType)roleType;
 
@@ -56,22 +61,8 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark -- 进出房间
 /**
  进入房间
- @param channel 渠道
- @param appId 渠道的appid
- @param roomId 房间号
- @param userId 用户id
- @param userType 用户类型
- @param params 其他参数；各渠道传不同的内容（key/value）
- 声网 需要字段 key:token
- 腾讯V2需要字段 key:userSig record_id uc_biz_type
- 
- */
-- (void)enterRoom:(YMLiveChannel)channel
-            appId:(NSString *)appId
-           roomId:(NSString *)roomId
-           userId:(NSString *)userId
-         userType:(YMLiveUserType)userType
-           params:(NSDictionary *)params;
+*/
+- (void)enterRoom;
 
 //设置用户角色为主播
 - (void)setClientRole:(YMLiveUserType)userType;

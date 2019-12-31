@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 开启崩溃收集
+ 开启崩溃收集，默认开启，在进教室前调用
 
  @param enable YES 开启， NO 关闭
  */

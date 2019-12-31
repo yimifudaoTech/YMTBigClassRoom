@@ -5,9 +5,9 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 target 'YMTBigClassRoom_Example' do
-  pod 'YMTBigClassRoom', :path => '../'
-
-  pod 'QMUIKit', '3.2.1'
+#  pod 'YMTBigClassRoom', :path => '../'
+  pod 'YMTBigClassRoom', '1.2.0.1'
+  pod 'QMUIKit', '4.0.4'
   pod 'WoodPeckeriOS', :configurations => ['Debug']
   pod 'LookinServer'
   pod 'ReactiveObjC'

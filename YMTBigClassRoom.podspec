@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YMTBigClassRoom'
-  s.version          = '1.1.1'
+  s.version          = '1.2.0.1'
   s.summary          = 'YMT BigClass Room.'
 
 # This description is used to generate tags and improve search results.
@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   
-  s.dependency 'YMTCloudClassroom', '1.1.1.3'
+  s.dependency 'YMTCloudClassroom', '1.2.0.1'
   s.dependency 'YMFlow', '0.1.8'
   s.dependency 'YYModel'
   s.dependency 'AFNetworking'

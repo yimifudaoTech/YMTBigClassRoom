@@ -9,11 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class YMCourseWareModel;
+@class YMViewCourseWareModel;
 
 @interface YMCourseWareListCell : UITableViewCell
 
-@property (nonatomic,strong)YMCourseWareModel * courseWareModel;
+@property (nonatomic,strong)YMViewCourseWareModel * viewCourseWareModel;
 
 @end
 

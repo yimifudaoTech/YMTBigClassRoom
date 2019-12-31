@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <YMTCloudClassroom/YMTSCServerHeader.h>
 #import <YMTCloudClassroom/YMTSCEntityDatas.h>
-#import "SDSCMineCatalogGOModel.h"
+#import "YMRoomModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,12 +17,12 @@ typedef void (^MockCommandBlock)(YMTSCSendMsgEntity *content);
 
 @interface SDSMallMockCommandView : UIView
 
-+ (void)showMockCommandViewWithRoomModel:(SDSCMineGoAgoraRoomModel *)model view:(UIView *)view mockCommandBlock:(MockCommandBlock)mockCommand;
++ (void)showMockCommandViewWithRoomModel:(YMRoomModel *)model view:(UIView *)view mockCommandBlock:(MockCommandBlock)mockCommand;
 + (void)hide;
 + (void)setDocId:(NSString *)docId;
 
 @property (nonatomic, copy) MockCommandBlock mockCommand;
-@property (nonatomic, strong) SDSCMineGoAgoraRoomModel *roomModel;
+@property (nonatomic, strong) YMRoomModel *roomModel;
 
 
 @end

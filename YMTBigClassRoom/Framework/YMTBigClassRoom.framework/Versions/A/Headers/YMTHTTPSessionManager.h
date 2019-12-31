@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "YMTHTTPURLModel.h"
+#import "YMEnum.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +20,9 @@ typedef id _Nullable (^YMTHTTPSessionManagerResultModify)(id _Nullable object, N
 
 /// env string
 @property (nonatomic, copy, readonly) NSString *envString;
+
+@property (nonatomic, copy, readonly) NSString *imEnvString;
+
 
 @property (nonatomic, copy) NSString *urlHost;
 @property (nonatomic, copy) NSString *urlPort;
@@ -37,7 +41,7 @@ typedef id _Nullable (^YMTHTTPSessionManagerResultModify)(id _Nullable object, N
                                 progress:(nullable void (^)(NSProgress *progress))progress
                                   result:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject, NSError *error))result;
 
-- (void)changeEnv:(NSString *)envStr;
+- (void)changeEnv:(YMTRoomEnvironment)envStr;
 
 - (YMTHTTPURLModel *)modifyURL:(NSString *)URLString ;
 

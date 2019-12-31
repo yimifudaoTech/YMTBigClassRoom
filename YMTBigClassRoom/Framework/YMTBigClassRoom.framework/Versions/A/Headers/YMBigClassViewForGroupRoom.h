@@ -10,7 +10,7 @@
 #import <YMTCloudClassroom/YMTSingleGroupDB.h>
 #import <YMTCloudClassroom/YMTRoomLessonPlanM.h>
 #import "YMTCloudClassroom/YMWhiteBoardModule.h"
-#import "XYCourseWareLayer.h"
+#import "YMCourseWareLayer.h"
 #import "NSString+Empty.h"
 #import "UIView+Geometry.h"
 #import "UIColor+Create.h"
@@ -53,7 +53,7 @@ typedef NS_ENUM(NSUInteger, YMTUserStatusKindType) {
 
 //业务层
 @property(strong, nonatomic) id<YMWhiteBoardProtocol> whiteBoardModule;
-@property (strong, nonatomic) XYCourseWareLayer *coursewareLayer;
+@property (strong, nonatomic) YMCourseWareLayer *coursewareLayer;
 //数据层
 @property(strong, nonatomic) YMTSingleGroupDB *DB;
 @property(strong, nonatomic) NSMutableArray *arrData;

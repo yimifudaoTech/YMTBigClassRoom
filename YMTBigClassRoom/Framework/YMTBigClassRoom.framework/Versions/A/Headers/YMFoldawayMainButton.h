@@ -96,6 +96,11 @@ typedef NS_ENUM(NSInteger, CircleShowDirection){
 @property (nonatomic, assign) BOOL canClick;
 
 /**
+ 更新工具Button的Selected状态
+ */
+- (void)updateFlodawayButtonSelectedStatus;
+
+/**
  *  构造方法
  *
  *  @param rect          rect

@@ -8,7 +8,7 @@
 
 #import "YMTEntryRoomViewController.h"
 
-#import <YMTBigClassRoom/SDSCMineCatalogGOModel.h>
+#import <YMTBigClassRoom/YMRoomModel.h>
 #import <YMTBigClassRoom/YMTHTTPSessionManager.h>
 #import "NSObject+YYModel.h"
 #import <QMUIKit/QMUIKit.h>

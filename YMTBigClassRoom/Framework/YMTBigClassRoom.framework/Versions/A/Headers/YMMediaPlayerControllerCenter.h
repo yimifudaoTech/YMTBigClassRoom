@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HttpDataModels.h"
+#import "YMAVModels.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -29,8 +29,10 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  播放音视频
  @param model 音视频模型
+ @param fatherView 父视图
+ @param needInitialize 是否只需要初始化
  */
-- (void)playWithAVModel:(AVControl*)model withFatherView:(UIView *)fatherView;
+- (void)playAVModel:(YMAVControl*)model withFatherView:(UIView *)fatherView needInitialize:(BOOL)needInitialize;
 
 
 /**

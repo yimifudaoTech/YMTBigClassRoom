@@ -7,7 +7,7 @@
 //
 
 #import "YMBigClassRoomBaseView.h"
-#import <YMTCloudClassroom/YMTCourseware.h>
+#import <YMTCloudClassroom/YMTH5Courseware.h>
 
 NS_ASSUME_NONNULL_BEGIN
 /// 课件组件与白板
@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** 课堂ID */
 @property(nonatomic, copy) NSString *lessonId;
 /** h5课件组件 */
-@property(nonatomic, readonly, nullable) YMTCourseware *h5Courseware;
+@property(nonatomic, readonly, nullable) YMTH5Courseware *h5Courseware;
 /** 当前正在同步数据 */
 @property(nonatomic, assign, getter=isSyncing) BOOL syncing;
 

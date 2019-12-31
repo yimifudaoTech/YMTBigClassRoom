@@ -19,7 +19,7 @@ typedef NS_ENUM(NSUInteger, YMSuspendViewType) {
 
 @interface YMSuspendView : UIView
 @property (nonatomic,assign)YMSuspendViewType type;
-@property (nonatomic,copy) void (^tapBlock)(void);
+@property (nonatomic,copy) void (^tapBlock)(UIGestureRecognizer * gesture);
 @property (nonatomic, copy) void (^multiTapBlock)(void);
 
 /**
@@ -33,7 +33,7 @@ typedef NS_ENUM(NSUInteger, YMSuspendViewType) {
  @param type 自动吸边的位置枚举
  @param tapBlock 点击回调block
  */
-+ (instancetype)showWithTypeOnWindow:(YMSuspendViewType)type tapBlock:(void (^)(void))tapBlock;
++ (instancetype)showWithTypeOnWindow:(YMSuspendViewType)type tapBlock:(void (^)(UIGestureRecognizer * gesture))tapBlock;
 
 
 /**
@@ -50,7 +50,7 @@ typedef NS_ENUM(NSUInteger, YMSuspendViewType) {
  @param parentView 父View
  @param tapBlock 点击回调
  */
-+ (instancetype)showWithTypeOnParentView:(YMSuspendViewType)type parentView:(UIView *)parentView tapBlock:(void (^)(void))tapBlock;
++ (instancetype)showWithTypeOnParentView:(YMSuspendViewType)type parentView:(UIView *)parentView tapBlock:(void (^)(UIGestureRecognizer * gesture))tapBlock;
 
 
 /**

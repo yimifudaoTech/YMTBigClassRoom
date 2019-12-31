@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		16589C172313EB2100E4E1D6 /* YMTEntryRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16589C142313EB2100E4E1D6 /* YMTEntryRoomViewController.m */; };
 		207AEB56036610DCDE61727A /* libPods-YMTBigClassRoom_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A07FA3B15D1B0D12CAFC4590 /* libPods-YMTBigClassRoom_Example.a */; };
+		2DB2B7A723BB359000E16330 /* BaiduBCESTS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB2B7A123BB359000E16330 /* BaiduBCESTS.framework */; };
+		2DB2B7A823BB359000E16330 /* BaiduBCEBasic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB2B7A223BB359000E16330 /* BaiduBCEBasic.framework */; };
+		2DB2B7A923BB359000E16330 /* AliyunOSSiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB2B7A323BB359000E16330 /* AliyunOSSiOS.framework */; };
+		2DB2B7AA23BB359000E16330 /* BaiduBCEVOD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB2B7A423BB359000E16330 /* BaiduBCEVOD.framework */; };
+		2DB2B7AB23BB359000E16330 /* BaiduBCEBOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB2B7A523BB359000E16330 /* BaiduBCEBOS.framework */; };
+		2DB2B7AC23BB359000E16330 /* YMTBigClassRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB2B7A623BB359000E16330 /* YMTBigClassRoom.framework */; };
 		4BF0E1149548726CEDC50AE8 /* libPods-YMTBigClassRoom_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E61DEFB64C9AFCDBD699CA /* libPods-YMTBigClassRoom_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -42,7 +48,13 @@
 		16589C142313EB2100E4E1D6 /* YMTEntryRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMTEntryRoomViewController.m; sourceTree = "<group>"; };
 		16589C152313EB2100E4E1D6 /* YMTEntryRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMTEntryRoomViewController.h; sourceTree = "<group>"; };
 		2A36FBDB0538E4EBBEB571BE /* Pods-YMTBigClassRoom_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMTBigClassRoom_Example.release.xcconfig"; path = "Target Support Files/Pods-YMTBigClassRoom_Example/Pods-YMTBigClassRoom_Example.release.xcconfig"; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* YMTBigClassRoom_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMTBigClassRoom_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DB2B7A123BB359000E16330 /* BaiduBCESTS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduBCESTS.framework; sourceTree = "<group>"; };
+		2DB2B7A223BB359000E16330 /* BaiduBCEBasic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduBCEBasic.framework; sourceTree = "<group>"; };
+		2DB2B7A323BB359000E16330 /* AliyunOSSiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AliyunOSSiOS.framework; sourceTree = "<group>"; };
+		2DB2B7A423BB359000E16330 /* BaiduBCEVOD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduBCEVOD.framework; sourceTree = "<group>"; };
+		2DB2B7A523BB359000E16330 /* BaiduBCEBOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduBCEBOS.framework; sourceTree = "<group>"; };
+		2DB2B7A623BB359000E16330 /* YMTBigClassRoom.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YMTBigClassRoom.framework; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* 溢慧云Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "溢慧云Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -76,7 +88,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB2B7A823BB359000E16330 /* BaiduBCEBasic.framework in Frameworks */,
+				2DB2B7AA23BB359000E16330 /* BaiduBCEVOD.framework in Frameworks */,
+				2DB2B7AC23BB359000E16330 /* YMTBigClassRoom.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				2DB2B7A723BB359000E16330 /* BaiduBCESTS.framework in Frameworks */,
+				2DB2B7A923BB359000E16330 /* AliyunOSSiOS.framework in Frameworks */,
+				2DB2B7AB23BB359000E16330 /* BaiduBCEBOS.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				207AEB56036610DCDE61727A /* libPods-YMTBigClassRoom_Example.a in Frameworks */,
@@ -97,6 +115,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DB2B79F23BB359000E16330 /* YMTBigClassRoom */ = {
+			isa = PBXGroup;
+			children = (
+				2DB2B7A023BB359000E16330 /* Framework */,
+			);
+			name = YMTBigClassRoom;
+			path = ../YMTBigClassRoom;
+			sourceTree = "<group>";
+		};
+		2DB2B7A023BB359000E16330 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				2DB2B7A123BB359000E16330 /* BaiduBCESTS.framework */,
+				2DB2B7A223BB359000E16330 /* BaiduBCEBasic.framework */,
+				2DB2B7A323BB359000E16330 /* AliyunOSSiOS.framework */,
+				2DB2B7A423BB359000E16330 /* BaiduBCEVOD.framework */,
+				2DB2B7A523BB359000E16330 /* BaiduBCEBOS.framework */,
+				2DB2B7A623BB359000E16330 /* YMTBigClassRoom.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
 		305119B8235D8E4E4D86B46F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +151,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				2DB2B79F23BB359000E16330 /* YMTBigClassRoom */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for YMTBigClassRoom */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -123,7 +164,7 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* YMTBigClassRoom_Example.app */,
+				6003F58A195388D20070C39A /* 溢慧云Demo.app */,
 				6003F5AE195388D20070C39A /* YMTBigClassRoom_Tests.xctest */,
 			);
 			name = Products;
@@ -219,7 +260,7 @@
 			);
 			name = YMTBigClassRoom_Example;
 			productName = YMTBigClassRoom;
-			productReference = 6003F58A195388D20070C39A /* YMTBigClassRoom_Example.app */;
+			productReference = 6003F58A195388D20070C39A /* 溢慧云Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* YMTBigClassRoom_Tests */ = {
@@ -331,7 +372,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YMTBigClassRoom_Example/Pods-YMTBigClassRoom_Example-resources.sh",
-				"${PODS_ROOT}/QMUIKit/QMUIKit/QMUIResources/QMUIResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/QMUIKit/QMUIResources.bundle",
 				"${PODS_ROOT}/../../YMTBigClassRoom/Framework/YMTBigClassRoom.framework/Versions/A/Resources/000000.png",
 				"${PODS_ROOT}/../../YMTBigClassRoom/Framework/YMTBigClassRoom.framework/Versions/A/Resources/000000@2x.png",
 				"${PODS_ROOT}/../../YMTBigClassRoom/Framework/YMTBigClassRoom.framework/Versions/A/Resources/000000@3x.png",
@@ -554,10 +595,13 @@
 				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/but_title_pull_up@3x.png",
 				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/daojishi@2x.png",
 				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/daojishi@3x.png",
+				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/default_student.png",
 				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/default_student@2x.png",
 				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/default_student@3x.png",
+				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/default_teacher.png",
 				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/default_teacher@2x.png",
 				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/default_teacher@3x.png",
+				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/default_video.png",
 				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/default_video@2x.png",
 				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/default_video@3x.png",
 				"${PODS_ROOT}/YMTCloudClassroom/YMTCloudClassroom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/deviceTest_btn_camera@2x.png",
@@ -986,10 +1030,13 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/but_title_pull_up@3x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/daojishi@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/daojishi@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/default_student.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/default_student@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/default_student@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/default_teacher.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/default_teacher@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/default_teacher@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/default_video.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/default_video@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/default_video@3x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/deviceTest_btn_camera@2x.png",
@@ -1388,8 +1435,8 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "YMTBigClassRoom/YMTBigClassRoom-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.1mifudao.student;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yimifudao.classroomsdkdemo;
+				PRODUCT_NAME = "溢慧云Demo";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1410,8 +1457,8 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "YMTBigClassRoom/YMTBigClassRoom-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.1mifudao.student;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yimifudao.classroomsdkdemo;
+				PRODUCT_NAME = "溢慧云Demo";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};

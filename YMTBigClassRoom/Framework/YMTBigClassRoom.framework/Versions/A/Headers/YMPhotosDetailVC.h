@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) BOOL isLandscapeRight;
 
 - (instancetype)initWithPhotoAssetCollection:(PHAssetCollection *)assetCollection;
-- (instancetype)initWithPhotoPHAssets:(NSArray*)phssets;
+- (instancetype)initWithPhotoPHAssets:(NSMutableArray*)phAssets;
 /**
  选择好图片后回调Block
  */
