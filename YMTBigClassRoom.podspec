@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YMTBigClassRoom'
-  s.version          = '1.2.0.1'
+  s.version          = '1.2.1.1'
   s.summary          = 'YMT BigClass Room.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.resources = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework/Versions/A/Resources/**'
+  s.resources = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework/Versions/A/Resources/**','YMTBigClassRoom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/**'
   s.vendored_frameworks = 'YMTBigClassRoom/Framework/*.framework'
   s.public_header_files = 'YMTBigClassRoom/YMTBigClassRoom.framework/Headers/*.h'
   
@@ -39,11 +39,13 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+   s.frameworks = 'UIKit','WebKit', 'AdSupport'
+   s.library = 'c++'
   # s.dependency 'AFNetworking', '~> 2.3'
-  
-  s.dependency 'YMTCloudClassroom', '1.2.0.1'
-  s.dependency 'YMFlow', '0.1.8'
+
+#  s.dependency 'YMTCloudClassroom', '1.2.1.10'
+  s.dependency 'QTEventBus'
+#  s.dependency 'YMFlow', '0.1.8'
   s.dependency 'YYModel'
   s.dependency 'AFNetworking'
   s.dependency 'Masonry'
@@ -51,6 +53,11 @@ Pod::Spec.new do |s|
   s.dependency 'ZFPlayer', '2.1.3'
   s.dependency 'SDWebImage', '4.0.0'
   s.dependency 'Bugly'
+  s.dependency 'MJExtension'
+  s.dependency 'AgoraRtcEngine_iOS','~> 2.3.0'
+  s.dependency 'TXLiteAVSDK_TRTC', '6.3.7088'
+  s.dependency 'CocoaAsyncSocket'
+  s.dependency 'Protobuf', '~> 3.7.0'#Protobuf无法更新到3.7.1(3.6.1可以更新)，使用指定资源路径更新
   
   s.user_target_xcconfig = { 
     'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)',

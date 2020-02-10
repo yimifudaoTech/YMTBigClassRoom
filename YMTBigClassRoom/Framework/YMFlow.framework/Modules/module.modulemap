@@ -1,0 +1,6 @@
+framework module YMFlow {
+  umbrella header "YMFlow.h"
+
+  export *
+  module * { export * }
+}

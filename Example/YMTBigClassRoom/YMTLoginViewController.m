@@ -64,7 +64,6 @@
 - (void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     
-    @weakify(self);
     [self.logoImgView mas_makeConstraints:^(MASConstraintMaker *make) {
        
         make.left.top.bottom.mas_equalTo(0);
@@ -285,8 +284,8 @@ static int envClickNum = 0;
     return [COPromise promise:^(COPromiseFulfill  _Nonnull fullfill, COPromiseReject  _Nonnull reject) {
         
         NSDictionary *dic = @{@"mobileNo": self.accountTextField.text, @"password": [self md5StringFromData:[self.pswTestField.text dataUsingEncoding:NSUTF8StringEncoding]]/*, @"sysInfo": @"IOS", @"umengAppKey": @"5b29f1aff43e482cc400001e", @"appSource": @"YIMI", @"apiVersion":@"2.4", @"type": @"STU",@"isForce":@"1",@"from":@"1",@"deviceInfo":@"iOS12.3.1:iPad5,1:iPad mini 4 (A1538)",@"appVersion":@"4.8.1121",@"timestamp":[self getTimeStemp]*/};
-        
-        [[YMTHTTPSessionManager shareManager] fetch:@"user_login" method:@"" parameters:dic progress:nil result:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject, NSError * _Nonnull error) {
+        YMTHTTPRequestModel * request = [[YMTHTTPRequestModel alloc] initPostRequestWithUrl:@"user_login" params:dic];
+        [[YMTHTTPSessionManager shareManager] fetch:request progress:nil result:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject, NSError * _Nonnull error) {
             if (responseObject) {
                 fullfill(responseObject);
             }else {
