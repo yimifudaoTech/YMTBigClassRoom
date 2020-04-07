@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YMTBigClassRoom'
-  s.version          = '1.2.2.2'
+  s.version          = '1.2.2.3'
   s.summary          = 'YMT BigClass Room.'
 
 # This description is used to generate tags and improve search results.
@@ -51,10 +51,10 @@ Pod::Spec.new do |s|
   s.dependency 'Masonry'
   s.dependency 'YYCache'
   s.dependency 'ZFPlayer', '2.1.3'
-  s.dependency 'SDWebImage', '4.0.0'
+  s.dependency 'SDWebImage', '5.4.1'
   s.dependency 'Bugly'
   s.dependency 'MJExtension'
-  s.dependency 'AgoraRtcEngine_iOS','~> 2.3.0'
+  s.dependency 'AgoraRtcEngine_iOS','~> 2.8.0'
   s.dependency 'TXLiteAVSDK_TRTC', '6.3.7088'
   s.dependency 'CocoaAsyncSocket'
   s.dependency 'Protobuf', '~> 3.7.0'#Protobuf无法更新到3.7.1(3.6.1可以更新)，使用指定资源路径更新
