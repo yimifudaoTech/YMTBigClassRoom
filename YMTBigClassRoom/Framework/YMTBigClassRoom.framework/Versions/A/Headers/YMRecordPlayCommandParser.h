@@ -28,11 +28,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign)long long totalTime;
 @property(nonatomic, readonly) NSString* totalTimeString;
 
-@property(nonatomic, assign)long long currentTime;
 @property(nonatomic, readonly) NSString* currentTimeString;
 @property(nonatomic, assign)long long currentPlayTime;
 
 @property(nonatomic, assign) NSUInteger currentIndex;
+@property(nonatomic, assign)long long currentCommandTime;
 @property(nonatomic, assign) CGFloat progress;
 @property(nonatomic, assign) CGFloat rate;//默认1倍速度
 

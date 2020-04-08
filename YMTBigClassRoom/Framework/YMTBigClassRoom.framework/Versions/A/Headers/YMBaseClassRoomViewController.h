@@ -16,19 +16,21 @@
 #import "YMCourseWindowView.h"
 #import "YMCursorView.h"
 #import "YMBaseControlCenter.h"
-
+#import "YMBoardWindowManager.h"
+#import "YMCloudClassroomDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @class YMUserAuthManager;
 
 
-@interface YMBaseClassRoomViewController : UIViewController <YMClassRoomProtocol, YMClassRoomLifeCycleDelegate, YMClassRoomLifeCycleProtocol>
+@interface YMBaseClassRoomViewController : UIViewController <YMClassRoomProtocol, YMClassRoomLifeCycleDelegate, YMClassRoomLifeCycleProtocol,YMTTopBarDelegate>
 @property (strong, nonatomic) YMRoomModel *roomModel;
 @property (nonatomic, strong) YMTChatModule *chatModule;
 @property (nonatomic, strong) YMTSideButtonbar *sideButtonbar;
 @property (nonatomic, strong) YMTTopBar *topBar;
 @property (nonatomic, strong) UIView *blackBoardView;
 @property (nonatomic, strong) YMCourseWindowView *avCourseWareWindow;
+@property (nonatomic, strong) YMBoardWindowManager *boardWindowManager;
 
 /// 控制中心
 @property (nonatomic, strong) YMBaseControlCenter *controlCenter;
@@ -48,6 +50,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong)NSMutableDictionary *courseWareTypeDic;
 
 @property (nonatomic ,strong) YMCursorView * cursorView;
+
+@property (nonatomic, strong, nullable) YMClassRoomConfiguration *roomConfiguration;
+
+- (void)setDelegate:(id<YMTCloudClassroomDelegate>)delegate;
 
 - (void)setUpSideButtonBar;
 

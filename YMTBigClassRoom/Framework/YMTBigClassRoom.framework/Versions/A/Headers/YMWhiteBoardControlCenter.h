@@ -32,6 +32,8 @@ typedef NS_ENUM(NSInteger, YMBoardType) {
 
 - (void)clearCurrentBoardPage;
 
+- (void)clearAllBoardPage;
+
 - (void)deleteGraph:(NSString *)itemId;
 
 - (void)deleteGraphBySelf;
@@ -55,6 +57,11 @@ typedef NS_ENUM(NSInteger, YMBoardType) {
 
 /// 是否开启白板交互
 - (void)setEnable:(BOOL)enable;
+
+
+/// 是否隐藏白板
+/// @param isHiden YES 隐藏， NO 显示
+- (void)hideDrawLayer:(BOOL)isHiden;
 
 /// 选择白板行为类型
 - (void)setWhiteBoardToolType:(YMDrawToolType)type;
@@ -84,6 +91,8 @@ typedef NS_ENUM(NSInteger, YMBoardType) {
 - (void)setBoardId:(NSString *)boardId;
 
 - (void)updateWhiteboard;
+
+- (void)captureImage:(void(^)(UIImage *image))callback;
 
 
 /// 获取boardId

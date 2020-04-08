@@ -87,6 +87,7 @@ typedef NS_ENUM(NSUInteger, YMTRoomInfoCode) {
      * 进入教室错误：enterRoom指令失败
      */
     YMRoomErrorCode_JoinRoom_SocketEnterRoomFail = 1009,
+    
     /**
      * 查看录播：未知错误
      */
@@ -135,15 +136,6 @@ typedef NS_ENUM(NSUInteger, YMTRoomInfoCode) {
      * 获取Token失败
      */
     YMRoomErrorCode_LoginFail = 5000,
-};
-
-// 云教室环境定义
-typedef NS_ENUM(NSUInteger, YMTRoomEnvironment) {
-    YMTRoomEnvironment_Sit01,
-    YMTRoomEnvironment_Sit02,
-    YMTRoomEnvironment_Sit03,
-    YMTRoomEnvironment_Sit04,
-    YMTRoomEnvironment_Release,
 };
 
 // 角色

@@ -7,6 +7,11 @@
 
 #import <Foundation/Foundation.h>
 #import "YMEnum.h"
+#import <YMBaseLib/YMTHTTPSessionManager.h>
+#import "YMRoomModel.h"
+#import "YMClassRoomConfiguration.h"
+#import "YMCloudClassroomInfo.h"
+#import "YMCloudClassroomDelegate.h"
 @class YMSDKUserInfo;
 
 typedef void(^YMTBigClassRoomRegisterResult)(BOOL success, YMTRoomInfoCode code);
@@ -46,6 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
  设置YMTBigClassSDKManager环境
  */
 @property (nonatomic, assign) YMTRoomEnvironment switchEnv;
+@property (nonatomic, weak) id<YMTCloudClassroomDelegate> delegate;
 
 + (instancetype)shareManager;
 
@@ -75,13 +81,22 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loginWithUserID:(NSString *)userID result:(YMTBigClassRoomLoginRoomResult)result;
 
 /**
- 加入教室,如果成功自动开发房间
+ 加入教室
  @param userInfo  教室内用户信息模型
+ @param parentView 打开教室的ViewController
  @param result    onJoinCloudRoom 回调
  */
 - (void)joinCloudRoom:(YMSDKUserInfo *)userInfo
                       appViewController:(UIViewController *)parentView
                                  result:(YMTBigClassRoomJoinRoomResult)result ;
+
+
+/// 加入教室，支持配置教室属性
+/// @param userInfo 教室内信息模型
+/// @param parentView 打开教室的ViewController
+/// @param configuration 教室属性配置信息
+/// @param result onJoinCloudRoom回调
+- (void)joinCloudRoom:(YMSDKUserInfo *)userInfo appViewController:(UIViewController *)parentView withConfiguration:(YMClassRoomConfiguration * _Nullable)configuration result:(YMTBigClassRoomJoinRoomResult)result;
 
 /**
  退出教室
@@ -123,6 +138,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)courseWare:(UIViewController *)parentVC roomId:(NSString *)roomId token:(NSString *)token userId:(NSString *)userId result:(YMTRequestCallBackResult)result;
 
+
 @end
 
 @interface YMSDKUserInfo : NSObject
@@ -139,15 +155,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *headUrl;
 // role    用户角色    必填项
 @property (nonatomic, assign) YMRoleType role;
-// identity 用户身份    选填项
-@property (nonatomic, strong) NSString *identity;
 // nickName 用户昵称或者名字    必填项
 @property (nonatomic, strong) NSString *nickName;
 // bussinessData 自定义业务json数据    选填项
 @property (nonatomic, strong) NSString *bussinessData;
 // relatedUserId 家长旁听原学生uid    选填项
 @property (nonatomic, strong) NSString *relatedUserId;
-// userIdentity 家长uid    选填项
+// userIdentity 用户身份   必填项
 @property (nonatomic, strong) NSString *userIdentity;
 
 @end

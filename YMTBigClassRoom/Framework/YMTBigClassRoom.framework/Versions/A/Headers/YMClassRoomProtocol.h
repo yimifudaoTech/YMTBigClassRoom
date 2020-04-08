@@ -10,7 +10,7 @@
 
 typedef NS_ENUM(NSInteger, YMRoomMode) {
     YMRoomMode_LiveRoom,
-    YMBoardType_RecordPlay
+    YMRoomMode_RecordPlay
 };
 
 typedef NS_ENUM(NSInteger, YMRoomAbilityModule) {

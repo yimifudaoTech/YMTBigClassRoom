@@ -9,8 +9,8 @@
 
 @interface YMBaseCousewareView : UIView
 @property(nonatomic, strong) YMNativeCourseWare * _Nullable nativeCourseWare;
-@property(nonatomic, assign) BOOL is16_9version;
- 
+@property(nonatomic, assign) CGFloat coursewareAspectRatio;
+
 - (void)showCourseWare:(YMTCoursewareInfo * _Nonnull)courseWareInfo;
 
 - (void)refreshSubViewFrame:(CGRect)frame;

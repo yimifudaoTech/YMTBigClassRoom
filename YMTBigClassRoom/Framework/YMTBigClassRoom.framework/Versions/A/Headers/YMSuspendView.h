@@ -60,6 +60,11 @@ typedef NS_ENUM(NSUInteger, YMSuspendViewType) {
  */
 - (void)enableDrag:(BOOL)isEnable;
 
+
+/// 设置拖动上边界
+/// @param top 距父view顶部的距离
+- (void)setTopMargin:(CGFloat)top;
+
 /**
  移除
  */

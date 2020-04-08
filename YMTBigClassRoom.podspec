@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YMTBigClassRoom'
-  s.version          = '1.2.2.4'
+  s.version          = '1.3.1.1'
   s.summary          = 'YMT BigClass Room.'
 
 # This description is used to generate tags and improve search results.
@@ -39,23 +39,23 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-   s.frameworks = 'UIKit','WebKit', 'AdSupport'
+   s.frameworks = 'UIKit','WebKit', 'AdSupport', 'AVKit'
    s.library = 'c++'
-  # s.dependency 'AFNetworking', '~> 2.3'
-
-#  s.dependency 'YMTCloudClassroom', '1.2.1.10'
+   
   s.dependency 'QTEventBus'
-#  s.dependency 'YMFlow', '0.1.8'
   s.dependency 'YYModel'
-  s.dependency 'AFNetworking'
+  s.dependency 'AFNetworking', '3.2.1'
   s.dependency 'Masonry'
   s.dependency 'YYCache'
   s.dependency 'ZFPlayer', '2.1.3'
   s.dependency 'SDWebImage', '5.4.1'
   s.dependency 'Bugly'
   s.dependency 'MJExtension'
-  s.dependency 'AgoraRtcEngine_iOS','~> 2.8.0'
-  s.dependency 'CocoaAsyncSocket'
+  s.dependency 'YLGIFImage', '0.11'
+  s.dependency 'CocoaAsyncSocket', '7.6.1'
+  s.dependency 'MBProgressHUD', '1.1.0'
+  s.dependency 'AgoraRtcEngine_iOS','2.3.1'
+  s.dependency 'TXLiteAVSDK_TRTC', '6.3.7088'
   s.dependency 'Protobuf', '~> 3.7.0'#Protobuf无法更新到3.7.1(3.6.1可以更新)，使用指定资源路径更新
   
   s.user_target_xcconfig = { 

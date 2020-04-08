@@ -1,32 +1,32 @@
 {
     "domain": {
         "Server" : {
-            "Sit01": "http://sit01-liveroom.yimifudao.com",
-            "Sit02": "http://sit02-liveroom.yimifudao.com",
-            "Sit03": "http://sit03-liveroom.yimifudao.com",
-            "Sit04": "http://sit04-liveroom.yimifudao.com",
-            "Release": "http://liveroom.yimifudao.com",
+            "Sit01": "http://sit01-liveroom.jronline.com",
+            "Sit02": "http://sit02-liveroom.jronline.com",
+            "Sit03": "http://sit03-liveroom.jronline.com",
+            "Sit04": "http://sit04-liveroom.jronline.com",
+            "Release": "http://liveroom.jronline.com",
         },
         "Server1" : {
-            "Sit01": "http://sit04-api.yimifudao.com",
-            "Sit02": "http://sit04-api.yimifudao.com",
-            "Sit03": "http://sit04-api.yimifudao.com",
-            "Sit04": "http://sit04-api.yimifudao.com",
-            "Release": "https://yimifudao.com",
+            "Sit01": "http://sit04-api.jronline.com",
+            "Sit02": "http://sit04-api.jronline.com",
+            "Sit03": "http://sit04-api.jronline.com",
+            "Sit04": "http://sit04-api.jronline.com",
+            "Release": "https://jronline.com",
         },
         "ServerGalaxy" : {
-            "Sit01": "https://galaxy-bp-prod.yimifudao.com/buryPoint/ios",
-            "Sit02": "https://galaxy-bp-prod.yimifudao.com/buryPoint/ios",
-            "Sit03": "https://galaxy-bp-prod.yimifudao.com/buryPoint/ios",
-            "Sit04": "https://galaxy-bp-prod.yimifudao.com/buryPoint/ios",
-            "Release": "https://galaxy-burypoint-pb.yimifudao.com/buryPoint/ios",
+            "Sit01": "https://galaxy-bp-prod.jronline.com/buryPoint/ios",
+            "Sit02": "https://galaxy-bp-prod.jronline.com/buryPoint/ios",
+            "Sit03": "https://galaxy-bp-prod.jronline.com/buryPoint/ios",
+            "Sit04": "https://galaxy-bp-prod.jronline.com/buryPoint/ios",
+            "Release": "https://galaxy-burypoint-pb.jronline.com/buryPoint/ios",
         },
         "ServerOSSSupport" : {
-            "Sit01": "http://sit01-platform.yimifudao.com",
-            "Sit02": "http://sit02-platform.yimifudao.com",
-            "Sit03": "http://sit03-platform.yimifudao.com",
-            "Sit04": "http://sit04-platform.yimifudao.com",
-            "Release": "https://platform.yimifudao.com",
+            "Sit01": "http://sit01-liveroom.jronline.com",
+            "Sit02": "http://sit02-liveroom.jronline.com",
+            "Sit03": "http://sit03-liveroom.jronline.com",
+            "Sit04": "http://sit04-liveroom.jronline.com",
+            "Release": "https://liveroom.jronline.com",
         },
         "Local": {
             "Debug": "http://10.0.40.130:8007",
@@ -92,11 +92,13 @@
             "domain":"Server",
             "path":"/v1.0.0/openapi/token/app/playback",
             "method": "POST",
+            "requestSerializer": "application/json"
         },
         "play_back_withoutToken": {
             "domain":"Server",
             "path":"/v1.0.0/openapi/app/playback",
             "method": "POST",
+            "requestSerializer": "application/json"
         },
         "courseware_list": {
             "domain":"Server",
@@ -112,7 +114,7 @@
         },
         "get_oss_support": {
             "domain":"ServerOSSSupport",
-            "path":"/v1.0.0/erp/support/oss/security",
+            "path":"/v1.0.0/openapi/support/oss/security",
             "method": "GET",
             "requestSerializer": "application/json"
         },
@@ -136,11 +138,11 @@
         },
     },
     "h5CoursewarePreloadUrl": {
-        "Sit01":"http://sit01-kejian.yimifudao.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
-        "Sit02":"http://sit02-kejian.yimifudao.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
-        "Sit03":"http://sit03-kejian.yimifudao.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
-        "Sit04":"http://sit04-kejian.yimifudao.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
-        "Release":"http://kejian.yimifudao.com/appPreview?courseware=389367979634069505&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
+        "Sit01":"http://sit01-kejian.jronline.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
+        "Sit02":"http://sit02-kejian.jronline.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
+        "Sit03":"http://sit03-kejian.jronline.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
+        "Sit04":"http://sit04-kejian.jronline.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
+        "Release":"http://kejian.jronline.com/appPreview?courseware=389367979634069505&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
     }
     
 }

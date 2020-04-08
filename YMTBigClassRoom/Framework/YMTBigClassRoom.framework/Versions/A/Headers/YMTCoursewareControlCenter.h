@@ -18,6 +18,9 @@
 
 @property (nonatomic, copy) void(^ _Nonnull pageChangeBlock)(NSInteger pageCount, NSInteger pageIndex);
 
+// 展示答题板
+@property (nonatomic,copy) void(^ _Nullable showAnswerBoardBlock)(void);
+
 - (void)showCourseWare:(YMTCoursewareInfo * _Nonnull)courseWareInfo totalCount:(NSInteger)totalCount;
 
 - (void)updateCourseWareFrame;
@@ -32,6 +35,8 @@
 
 #pragma mark - 滑动，放大操作
 - (void)scrollToOffset:(CGFloat)offset;
+
+- (void)setCoursewareZoomEnable:(BOOL)enable;
 
 /// 播放动画
 /// @param courseWareId 课件ID

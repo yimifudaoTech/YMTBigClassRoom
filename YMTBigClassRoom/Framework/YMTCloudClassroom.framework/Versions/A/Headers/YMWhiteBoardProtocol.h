@@ -138,6 +138,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)handleTouchEvent:(CGPoint)point previous:(CGPoint)previous;
 - (void)handlePendoSuspendedEvent:(CGPoint)point;
 
+- (void)captureImage:(void(^)(UIImage *image))callback;
+
 @end
 
 NS_ASSUME_NONNULL_END

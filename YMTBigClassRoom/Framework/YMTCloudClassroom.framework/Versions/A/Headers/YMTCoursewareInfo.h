@@ -55,6 +55,10 @@ typedef NS_ENUM(NSUInteger, YMTCoursewareType) {
 /**是否显示解析*/
 @property(nonatomic, assign) BOOL syncToStudent;
 
+///课件宽高比例
+@property (nonatomic, assign) CGFloat docAspectRatio;
+
+
 /** 获取当前对象对应的json字符串 */
 - (NSString *)jsonString;
 

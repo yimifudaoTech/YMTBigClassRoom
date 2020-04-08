@@ -18,7 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)imControlCenter:(YMIMControlCenter *)centerCenter onEnterRoom:(nullable NSString *)uid;
 - (void)imControlCenter:(YMIMControlCenter *)centerCenter onExitRoom:(nullable NSString *)uid;
 - (void)imControlCenter:(YMIMControlCenter *)centerCenter onDisconnect:(nullable NSString *)uid;
+- (void)imControlCenter:(YMIMControlCenter *)centerCenter onConnectFail:(nullable NSString *)uid;
 - (void)imControlCenter:(YMIMControlCenter *)centerCenter onCommandReceived:(YMTSCSendMsgEntity *)commandEntity isRealTime:(BOOL)isRealTime;
+- (void)imControlCenter:(YMIMControlCenter *)centerCenter onAsyncHistoryData:(BOOL)isSuccess withUid:(NSString *)uid;
 
 
 @end
@@ -38,6 +40,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)exitRoom;
 
 - (void)setDelegate:(id<YMIMControlCenterDelegate>)delegate;
+
+
+/// 获取当前连接的服务器IP
+- (NSString *)getCurrentIp;
 
 @end
 

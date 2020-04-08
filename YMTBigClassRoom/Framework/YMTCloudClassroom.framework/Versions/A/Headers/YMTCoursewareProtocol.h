@@ -99,6 +99,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setCanTouch:(BOOL)can;
 
 /**
+ 设置是否可以缩放
+ @param enable 是否可以缩放
+ */
+- (void)setZoomEnable:(BOOL)enable;
+
+/**
  播放当前页面动画
 
  @param step 播放到第几步
@@ -126,10 +132,12 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol YMTCoursewareReceiveDataDelegate <NSObject>
 
 /**
- 接收到JS发送消息
+ 接收到JS返回的信息
+ @param message     消息体
+ @param name    消息名称
  */
 @optional
-- (void)receiveDataFromCourseware:(NSString *)message;
+- (void)receiveDataFromCourseware:(NSString *)message scriptMessageName:(NSString *)name;
 
 @end
 

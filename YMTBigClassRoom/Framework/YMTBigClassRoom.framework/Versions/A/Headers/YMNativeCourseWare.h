@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "YMCourseWareLayer.h"
-#import "NSString+Empty.h"
-#import "UIView+Geometry.h"
-#import "UIColor+Create.h"
+#import <YMBaseLib/NSString+Empty.h>
+#import <YMUIkit/UIView+Geometry.h>
+#import <YMUIkit/UIColor+Create.h>
 
 @interface YMNativeCourseWare : UIView
 
-@property(nonatomic, assign) BOOL is16_9version;
+@property (nonatomic, assign) CGFloat coursewareAspectRatio;
 
 - (void)setHidden:(BOOL)hidden;
 

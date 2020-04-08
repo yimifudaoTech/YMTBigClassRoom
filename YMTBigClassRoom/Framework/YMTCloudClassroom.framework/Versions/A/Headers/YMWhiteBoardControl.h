@@ -93,6 +93,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)handleTouchEvent:(int)event point:(CGPoint)point previous:(CGPoint)previous;
 
+- (void)captureImage:(void(^)(UIImage *image))callback;
 
 @end
 

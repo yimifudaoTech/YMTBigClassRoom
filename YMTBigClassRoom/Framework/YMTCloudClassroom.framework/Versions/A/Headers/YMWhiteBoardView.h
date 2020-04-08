@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "YMDrawTool.h"
 #import "YMDrawTrailModel.h"
+#import <YMUIkit/UIView+YMCaptureImage.h>
 
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 

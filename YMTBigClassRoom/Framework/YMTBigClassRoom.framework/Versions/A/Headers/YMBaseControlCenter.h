@@ -11,8 +11,11 @@
 #import "YMTCoursewareControlCenter.h"
 #import "YMTAudioVideoControlCenter.h"
 #import "YMMediaPlayerControllerCenter.h"
+#import "YMRecordPlayControlCenter.h"
 #import "YMWhiteBoardManager.h"
 #import "YMClassRoomLifeCycle.h"
+#import "YMCommandMockManager.h"
+#import "YMCloudClassroomDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -32,6 +35,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @optional
 - (void)onClassShowCourseware:(NSString *)docId docName:(NSString *)docName;
+// 展示答题板
+@optional
+- (void)onClassShowAnswerBoard;
+
+@optional
+- (void)onRecordPlayStateChange:(YMRecordPlayerViewClickType)type;
 
 @end
 
@@ -47,6 +56,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 音视频控制器
 @property (nonatomic, strong) YMTAudioVideoControlCenter *audioVideoControlCenter;
 
+//录播 控制中心
+@property (nonatomic, strong) YMRecordPlayControlCenter *recordPlayControlCenter;
 
 /// 权限控制模块
 @property (nonatomic, strong) YMUserAuthManager *userAuthManager;
@@ -54,6 +65,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) YMClassRoomLifeCycle *roomLifeCycle;
 
 @property (nonatomic, assign) YMClassRoomType roomType;
+
+@property (nonatomic, strong) YMCommandMockManager *commandMockManager;
+
+@property (nonatomic, weak) id<YMTCloudClassroomDelegate> classroomDelegate;
 
 
 - (void)enterRoom;
@@ -67,6 +82,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)enableIMModule;
 
 - (void)enableLiveModule;
+
+- (void)enableRecordPlayModule;
 
 - (void)setClassRoomControlCenterDelegate:(id<YMClassRoomControlCenterDelegate>)delegate;
 

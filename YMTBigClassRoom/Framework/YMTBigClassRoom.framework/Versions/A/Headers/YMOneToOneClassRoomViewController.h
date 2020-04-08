@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YMOneToOneClassRoomViewController : YMBaseClassRoomViewController
 @property (nonatomic, strong) YMCourseWindowView *courseWareWindow;
+@property (nonatomic, strong) YMCourseWindowView *answerBoardWindow;
 @end
 
 NS_ASSUME_NONNULL_END

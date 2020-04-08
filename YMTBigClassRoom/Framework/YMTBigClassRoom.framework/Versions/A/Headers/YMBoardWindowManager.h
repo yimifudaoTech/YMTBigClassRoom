@@ -29,6 +29,10 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)removeWindow:(NSString *)identify;
 
+
+/// 移除所有窗口
+- (void)removeAllWindow;
+
 /*
  显示视图
 */

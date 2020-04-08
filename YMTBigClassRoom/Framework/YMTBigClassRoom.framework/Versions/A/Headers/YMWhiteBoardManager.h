@@ -30,6 +30,8 @@ static NSDictionary <NSNumber *, NSString *> * YMBoardTypeAndNameDictionary() {
 
 - (void)removeBoard:(NSString *)boardId;
 
+- (void)clearAllBoard;
+
 - (void)setSelectBoard:(NSString *)boardId;
 
 - (void)setSelectBoardWithBoard:(YMWhiteBoardControlCenter *)board;

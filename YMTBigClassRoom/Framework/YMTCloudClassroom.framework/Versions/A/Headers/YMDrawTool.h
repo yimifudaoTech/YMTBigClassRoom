@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "YMWhiteBoardEnum.h"
 #import "YMTextLayer.h"
-#import "YMKPITrack.h"
+#import <YMStatistics/YMKPITrack.h>
 
 #if __has_feature(objc_arc)
 #define ACE_HAS_ARC 1

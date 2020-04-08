@@ -20,7 +20,7 @@ typedef void (^ChannelDataOtherCallBack)(int code, id data,id otherData);
 
 // 适配16:9新增，课件的高度变化需要更新父容器scorollview的contentsize;
 @property (nonatomic, copy) void(^coursewareFrameUpdateBlock)(CGSize);
-@property (nonatomic,assign) BOOL is16_9version;
+@property (nonatomic, assign) CGFloat coursewareAspectRatio;
 @property (nonatomic,assign) CGFloat courseWidth;
 
 /**

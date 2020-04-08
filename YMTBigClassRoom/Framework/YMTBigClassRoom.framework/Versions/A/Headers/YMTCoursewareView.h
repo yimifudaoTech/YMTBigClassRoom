@@ -18,6 +18,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign, getter=isSyncing) BOOL syncing;
 /** 接收到JS发送提交答案信息 回调Block */
 @property(nonatomic,copy) void(^receiveDataFromCourseware)(NSString * jsonData);
+/** 接收到JS返回课件信息 回调Block */
+@property(nonatomic,copy) void(^receivePlanInfoFromCourseware)(NSString * jsonData);
+/** 接收到JS更新页码 回调Block */
+@property(nonatomic,copy) void(^receiveUpdatePlanPageFromCourseware)(NSString * jsonData);
+/** 接收到JS唤起答题板 回调Block */
+@property(nonatomic,copy) void(^receiveGetAnswerBoardFromCourseware)(void);
+/** 接收到JS弹出Toast 回调Block */
+@property(nonatomic,copy) void(^receiveShowToastFromCourseware)(NSString * jsonData);
+/** 接收到JS课件加载完成 回调Block */
+@property(nonatomic,copy) void(^receiveLoadFinishedFromCourseware)(NSString * jsonData);
+
 #pragma mark - 翻页操作
 /// 切换页码
 - (void)gotoPage:(NSInteger)page;
@@ -30,6 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - 滑动，放大操作
 - (void)scrollToOffset:(CGFloat)offset;
+
+- (void)setZoomEnable:(BOOL)enable;
 
 /// 播放动画
 /// @param step 动画步骤

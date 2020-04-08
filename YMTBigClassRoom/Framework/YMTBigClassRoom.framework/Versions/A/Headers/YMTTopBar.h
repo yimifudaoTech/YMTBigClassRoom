@@ -25,6 +25,9 @@ typedef void(^YMTTopBarExitHandle)(void);
 
 - (void)exitTopBarDelegate;
 
+@optional
+- (void)topBarOnTap:(id)sender;
+
 @end
 
 typedef NS_ENUM(NSInteger,YMTTopBarType) {
