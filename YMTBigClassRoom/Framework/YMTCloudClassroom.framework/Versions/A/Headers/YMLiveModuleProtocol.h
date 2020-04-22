@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)onUserTimeout:(NSUInteger)uid;
 - (void)receiveRemoteFirstFrame:(NSUInteger)uid;
 - (void)receiveLocalFirstFrame;
-- (void)reportSpeakers:(NSDictionary *)speakers;
+- (void)reportSpeakers:(NSDictionary *)speakers totalVolume:(NSInteger)totalVolume;
 - (void)onEnterRoomFailure:(NSInteger)errorCode;
 - (void)onAudioQuality:(NSDictionary *)audioQuality;
 - (void)onClientRoleChanged:(YMLiveUserType)oldRole newRole:(YMLiveUserType)newRole;
@@ -38,6 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol YMLiveModuleProtocol <NSObject>
 
+
+/// 设置当前通道
+/// @param channel  通道名
+- (void)setLiveChannel:(YMLiveChannel)channel;
+
+/// 获取音视频区域整体view
 - (YMLiveFrameContentView *)getAudioVeideoView;
 
 /**
@@ -65,7 +71,6 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark -- 进出房间
 /**
  进入房间
- @param channel 渠道
  @param appId 渠道的appid
  @param roomId 房间号
  @param userId 用户id
@@ -75,8 +80,7 @@ NS_ASSUME_NONNULL_BEGIN
  腾讯V2需要字段 key:userSig record_id uc_biz_type
  
  */
-- (void)enterRoom:(YMLiveChannel)channel
-            appId:(NSString *)appId
+- (void)enterRoom:(NSString *)appId
            roomId:(NSString *)roomId
            userId:(NSString *)userId
          userType:(YMLiveUserType)userType
@@ -86,9 +90,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  离开房间
- @param channel 音视频渠道
  */
-- (void)leaveRoom:(YMLiveChannel)channel;
+- (void)leaveRoom;
 
 /**
  启用音量大小提示
@@ -140,6 +143,29 @@ NS_ASSUME_NONNULL_BEGIN
  @param enable 开启/关闭
  */
 - (void)enableBeauty:(BOOL)enable;
+
+
+/// 启动音视频测试
+/// @param appId 音视频测试的appID
+- (void)startLiveTest:(NSString *)appId;
+
+/** 启动语音通话测试 */
+- (void)startEchoTest:(void(^)(NSString *channel, NSUInteger uid, NSInteger elapsed))successBlock;
+
+/** 终止语音通话测试 */
+- (void)stopEchoTest;
+
+/** 启用网络测试 */
+- (void)enableLastmileTest;
+
+/** 禁用网络测试 */
+- (void)disableLastmileTest;
+
+/** 启用本地视频测试 */
+- (void)startLocalVideoTestWithView:(UIView *)showView;
+
+/** 关闭本地视频测试 */
+- (void)stopLocalVideoTestWithView:(UIView *)showView;
 
 
 @end

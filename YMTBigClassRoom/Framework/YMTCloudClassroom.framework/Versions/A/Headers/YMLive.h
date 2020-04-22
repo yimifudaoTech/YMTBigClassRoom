@@ -13,9 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YMLive : NSObject<YMLiveProtocol>
 
-+ (instancetype)sharedInstance;
-
 @property (nonatomic, weak) id<YMLiveDelegate> delegate;
+
+- (instancetype)initWithLiveChannel:(YMLiveChannel)channel;
 
 @end
 

@@ -129,7 +129,6 @@ typedef void(^YMLiveCallbackBlock)(YMLiveChannel channel, id _Nullable result, N
 /**
  进入房间
  
- @param channel 渠道
  @param appId 渠道的appid
  @param rid 房间号
  @param uid 用户id
@@ -137,8 +136,7 @@ typedef void(^YMLiveCallbackBlock)(YMLiveChannel channel, id _Nullable result, N
  @param params 其他参数；各渠道传不同的内容
  @param callback 回调
  */
-- (void)enterRoom:(YMLiveChannel)channel
-            appId:(NSString *)appId
+- (void)enterRoom:(NSString *)appId
            roomId:(NSString *)rid
            userId:(NSString *)uid
          userType:(YMLiveUserType)userType
@@ -150,10 +148,9 @@ typedef void(^YMLiveCallbackBlock)(YMLiveChannel channel, id _Nullable result, N
 /**
  离开房间
  
- @param channel 渠道
  @param callback 回调
  */
-- (void)leaveRoom:(YMLiveChannel)channel callback:(nullable YMLiveCallbackBlock)callback;
+- (void)leaveRoom:(nullable YMLiveCallbackBlock)callback;
 
 /**
  切换摄像头
@@ -231,13 +228,6 @@ typedef void(^YMLiveCallbackBlock)(YMLiveChannel channel, id _Nullable result, N
  */
 - (void)destory;
 
-/**
- 渠道
- 
- @return 渠道类型
- */
-- (YMLiveChannel)channel;
-
 @optional
 
 /**
@@ -257,6 +247,30 @@ typedef void(^YMLiveCallbackBlock)(YMLiveChannel channel, id _Nullable result, N
  @param smoothLevel  灵敏度，[0,10]，数字越大，波动越灵敏，建议设置值3
  */
 - (void)enableAudioVolumeEvaluation:(NSUInteger)interval smooth:(NSInteger)smoothLevel;
+
+
+/// 启动音视频通道测试
+/// @param appId 通道测试appID
+- (void)startLiveTest:(NSString *)appId;
+
+/** 启动语音通话测试 */
+- (void)startEchoTest:(void(^)(NSString *channel, NSUInteger uid, NSInteger elapsed))successBlock;
+
+/** 终止语音通话测试 */
+- (void)stopEchoTest;
+
+/** 启用网络测试 */
+- (void)enableLastmileTest;
+
+/** 禁用网络测试 */
+- (void)disableLastmileTest;
+
+/** 启用本地视频测试 */
+- (void)startLocalVideoTestWithView:(UIView *)showView;
+
+/** 关闭本地视频测试 */
+- (void)stopLocalVideoTestWithView:(UIView *)showView;
+
 
 @end
 

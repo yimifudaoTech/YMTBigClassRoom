@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YMTBigClassRoom'
-  s.version          = '1.3.1.1'
+  s.version          = '1.3.1.2'
   s.summary          = 'YMT BigClass Room.'
 
 # This description is used to generate tags and improve search results.
@@ -54,8 +54,7 @@ Pod::Spec.new do |s|
   s.dependency 'YLGIFImage', '0.11'
   s.dependency 'CocoaAsyncSocket', '7.6.1'
   s.dependency 'MBProgressHUD', '1.1.0'
-  s.dependency 'AgoraRtcEngine_iOS','2.3.1'
-  s.dependency 'TXLiteAVSDK_TRTC', '6.3.7088'
+  s.dependency 'AgoraRtcEngine_iOS','2.8.0'
   s.dependency 'Protobuf', '~> 3.7.0'#Protobuf无法更新到3.7.1(3.6.1可以更新)，使用指定资源路径更新
   
   s.user_target_xcconfig = { 
