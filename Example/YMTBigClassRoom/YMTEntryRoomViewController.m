@@ -8,7 +8,7 @@
 
 #import "YMTEntryRoomViewController.h"
 #import <YMTBigClassRoom/YMRoomModel.h>
-#import <YMTBigClassRoom/YMTHTTPSessionManager.h>
+#import <YMTCloudClassroom/YMHttpSessionManager.h>
 #import "NSObject+YYModel.h"
 #import <QMUIKit/QMUIKit.h>
 #import <YYModel/NSObject+YYModel.h>
@@ -106,7 +106,7 @@ static NSString * const YMTUserDefaultKey_LessonId = @"YMTUserDefaultKey_LessonI
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSString *envString = [YMTHTTPSessionManager shareManager].envString;
+    NSString *envString = [[YMHttpSessionManager shareManager] getHTTPSessionManager].envString;
     self.envInputTextField.text = envString;
 }
 
@@ -196,11 +196,10 @@ static NSString * const YMTUserDefaultKey_LessonId = @"YMTUserDefaultKey_LessonI
     userModel.groupId = self.groupidtextfield.text?:@"";
     userModel.headUrl = @"http://static.yimifudao.com/static-files/user_pics/stu_head_pic/male.png";
     userModel.role = self.roleType;
-    userModel.identity = self.identityType;
     userModel.nickName = nickName;
     userModel.bussinessData = @"";
     userModel.relatedUserId = self.adtUserIdentity.text?:@"";
-    userModel.userIdentity = self.roleType==YMRoleTypeAudit?userModel.userID:@"";
+    userModel.userIdentity = self.identityType;
 
     [[YMTBigClassSDKManager shareManager] joinCloudRoom:userModel appViewController:self result:^(BOOL success, YMTRoomInfoCode code, UIViewController * _Nullable vc) {
         [QMUITips hideAllTips];
@@ -214,7 +213,7 @@ static NSString * const YMTUserDefaultKey_LessonId = @"YMTUserDefaultKey_LessonI
 }
 
 - (IBAction)envChangeAction:(id)sender {
-    NSString *envString = [YMTHTTPSessionManager shareManager].envString;
+    NSString *envString = [[YMHttpSessionManager shareManager] getHTTPSessionManager].envString;
     NSArray *envArray = @[@"Release", @"Sit01", @"Sit03"];
     NSArray *envEnumArray = @[@(YMTRoomEnvironment_Release), @(YMTRoomEnvironment_Sit01), @(YMTRoomEnvironment_Sit03)];
     
