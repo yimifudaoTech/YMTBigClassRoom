@@ -56,6 +56,7 @@ Pod::Spec.new do |s|
   s.dependency 'MBProgressHUD', '1.1.0'
   s.dependency 'AgoraRtcEngine_iOS','2.8.0'
   s.dependency 'Protobuf', '~> 3.7.0'#Protobuf无法更新到3.7.1(3.6.1可以更新)，使用指定资源路径更新
+  s.dependency 'YYCategories'
   
   s.user_target_xcconfig = { 
     'ARCHS[sdk=iphonesimulator*]' => '$(ARCHS_STANDARD_64_BIT)',
