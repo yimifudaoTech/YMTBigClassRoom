@@ -46,6 +46,11 @@ typedef id _Nullable (^YMTHTTPSessionManagerResultModify)(id _Nullable object, N
 
 - (YMTHTTPURLModel *)modifyURL:(NSString *)URLString;
 
+
+/// 根据url标识获取URL
+/// @param urlKey url标识
+- (NSString *)getURL:(NSString *)urlKey;
+
 @end
 
 NS_ASSUME_NONNULL_END
