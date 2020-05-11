@@ -59,6 +59,9 @@ NS_ASSUME_NONNULL_BEGIN
 //录播 控制中心
 @property (nonatomic, strong) YMRecordPlayControlCenter *recordPlayControlCenter;
 
+//信令 控制中心
+@property (nonatomic, strong) YMIMControlCenter *imControlCenter;
+
 /// 权限控制模块
 @property (nonatomic, strong) YMUserAuthManager *userAuthManager;
 

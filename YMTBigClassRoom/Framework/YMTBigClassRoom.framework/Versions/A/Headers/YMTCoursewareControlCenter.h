@@ -25,6 +25,12 @@
 
 - (void)updateCourseWareFrame;
 
+// 显示全屏查看课件View
+- (void)showFullScreenCoursewareView;
+// 获取全屏课件
+- (UIView *_Nonnull)getFullScreenCoursewareView;
+// 获取全屏课件id
+- (NSString *_Nonnull)getFullScreenCoursewareId;
 #pragma mark - 翻页操作
 /// 跳到课件第几页
 - (void)gotoPage:(NSInteger)page;

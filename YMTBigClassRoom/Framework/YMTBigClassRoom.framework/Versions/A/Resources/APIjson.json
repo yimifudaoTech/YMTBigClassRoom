@@ -1,32 +1,32 @@
 {
     "domain": {
         "Server" : {
-            "Sit01": "http://sit01-liveroom.jronline.com",
-            "Sit02": "http://sit02-liveroom.jronline.com",
-            "Sit03": "http://sit03-liveroom.jronline.com",
-            "Sit04": "http://sit04-liveroom.jronline.com",
-            "Release": "http://liveroom.jronline.com",
+            "Sit01": "http://sit01-liveroom.oneonline.com.cn",
+            "Sit02": "http://sit02-liveroom.oneonline.com.cn",
+            "Sit03": "http://sit03-liveroom.oneonline.com.cn",
+            "Sit04": "http://sit04-liveroom.oneonline.com.cn",
+            "Release": "http://liveroom.oneonline.com.cn",
         },
         "Server1" : {
-            "Sit01": "http://sit04-api.jronline.com",
-            "Sit02": "http://sit04-api.jronline.com",
-            "Sit03": "http://sit04-api.jronline.com",
-            "Sit04": "http://sit04-api.jronline.com",
-            "Release": "https://jronline.com",
+            "Sit01": "http://sit04-api.oneonline.com.cn",
+            "Sit02": "http://sit04-api.oneonline.com.cn",
+            "Sit03": "http://sit04-api.oneonline.com.cn",
+            "Sit04": "http://sit04-api.oneonline.com.cn",
+            "Release": "https://oneonline.com.cn",
         },
         "ServerGalaxy" : {
-            "Sit01": "https://galaxy-bp-prod.jronline.com/buryPoint/ios",
-            "Sit02": "https://galaxy-bp-prod.jronline.com/buryPoint/ios",
-            "Sit03": "https://galaxy-bp-prod.jronline.com/buryPoint/ios",
-            "Sit04": "https://galaxy-bp-prod.jronline.com/buryPoint/ios",
-            "Release": "https://galaxy-burypoint-pb.jronline.com/buryPoint/ios",
+            "Sit01": "https://galaxy-bp-prod.oneonline.com.cn/buryPoint/ios",
+            "Sit02": "https://galaxy-bp-prod.oneonline.com.cn/buryPoint/ios",
+            "Sit03": "https://galaxy-bp-prod.oneonline.com.cn/buryPoint/ios",
+            "Sit04": "https://galaxy-bp-prod.oneonline.com.cn/buryPoint/ios",
+            "Release": "https://galaxy-burypoint-pb.oneonline.com.cn/buryPoint/ios",
         },
         "ServerOSSSupport" : {
-            "Sit01": "http://sit01-liveroom.jronline.com",
-            "Sit02": "http://sit02-liveroom.jronline.com",
-            "Sit03": "http://sit03-liveroom.jronline.com",
-            "Sit04": "http://sit04-liveroom.jronline.com",
-            "Release": "https://liveroom.jronline.com",
+            "Sit01": "http://sit01-liveroom.oneonline.com.cn",
+            "Sit02": "http://sit02-liveroom.oneonline.com.cn",
+            "Sit03": "http://sit03-liveroom.oneonline.com.cn",
+            "Sit04": "http://sit04-liveroom.oneonline.com.cn",
+            "Release": "https://liveroom.oneonline.com.cn",
         },
         "Local": {
             "Debug": "http://10.0.40.130:8007",
@@ -138,12 +138,26 @@
         },
     },
     "h5CoursewarePreloadUrl": {
-        "Sit01":"http://sit01-kejian.jronline.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
-        "Sit02":"http://sit02-kejian.jronline.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
-        "Sit03":"http://sit03-kejian.jronline.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
-        "Sit04":"http://sit04-kejian.jronline.com/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
-        "Release":"http://kejian.jronline.com/appPreview?courseware=389367979634069505&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
-    }
+        "Sit01":"http://sit01-kejian.oneonline.com.cn/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
+        "Sit02":"http://sit02-kejian.oneonline.com.cn/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
+        "Sit03":"http://sit03-kejian.oneonline.com.cn/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
+        "Sit04":"http://sit04-kejian.oneonline.com.cn/appPreview?courseware=389097844016943105&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
+        "Release":"http://kejian.oneonline.com.cn/appPreview?courseware=389367979634069505&appid=kiFBIeLYvxOuWFgwWOy1XFFFehdA2ovo",
+    },
+    "h5BugReportUrl": {
+         "Sit01":"http://sit01-h5.oneonline.com.cn/bugReport",
+         "Sit02":"http://sit02-h5.oneonline.com.cn/bugReport",
+         "Sit03":"http://sit03-h5.oneonline.com.cn/bugReport",
+         "Sit04":"http://sit04-h5.oneonline.com.cn/bugReport",
+         "Release":"http://h5.oneonline.com.cn/bugReport",
+        },
+     "h5IMUrl": {
+         "Sit01":"http://sit01-im.oneonline.com.cn?role=stu",
+         "Sit02":"http://sit02-im.oneonline.com.cn?role=stu",
+         "Sit03":"http://sit03-im.oneonline.com.cn?role=stu",
+         "Sit04":"http://sit04-im.oneonline.com.cn?role=stu",
+         "Release":"http://im.oneonline.com.cn?role=stu",
+        }
     
 }
 

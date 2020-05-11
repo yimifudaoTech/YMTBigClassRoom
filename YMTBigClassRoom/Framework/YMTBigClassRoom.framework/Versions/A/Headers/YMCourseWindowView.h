@@ -23,6 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setTitle:(NSString *)title;
 
+- (void)addFullScreenButton;
+
+@property (nonatomic,copy)void(^ _Nonnull buttonActionBlock)(UIButton * button);
+
 @end
 
 NS_ASSUME_NONNULL_END
