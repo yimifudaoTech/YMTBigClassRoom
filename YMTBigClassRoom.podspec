@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YMTBigClassRoom'
-  s.version          = '1.3.1.2'
+  s.version          = '1.3.2.1'
   s.summary          = 'YMT BigClass Room.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-  s.resources = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework/Versions/A/Resources/**','YMTBigClassRoom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/**'
+  s.resources = 'YMTBigClassRoom/Framework/YMTBigClassRoom.framework/Versions/A/Resources/**','YMTBigClassRoom/Framework/YMTCloudClassroom.framework/Versions/A/Resources/**','YMTBigClassRoom/Framework/YMUIkit.framework/Versions/A/Resources/**'
   s.vendored_frameworks = 'YMTBigClassRoom/Framework/*.framework'
   s.public_header_files = 'YMTBigClassRoom/YMTBigClassRoom.framework/Headers/*.h'
   

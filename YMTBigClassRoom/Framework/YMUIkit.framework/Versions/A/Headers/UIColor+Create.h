@@ -11,7 +11,7 @@
 
 @interface UIColor (UIColor_Create)
 @property(nonatomic)NSString*hexString;
-+(instancetype)hexStringColor:(NSString*)hexColor;
++ (instancetype)hexStringColor:(NSString*)hexColor;
 + (instancetype)randomColor;
 
 @end

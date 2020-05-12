@@ -28,6 +28,8 @@ typedef void(^clickButtonBack)(BOOL select);
  */
 - (void)creatLoadingMaskView:(UIView *)view imageName:(NSString *)imageName loadingTitle:(NSString *)loadingTitle isHideTitle:(BOOL)isHideTitle setTimerDelay:(CGFloat)seconds;
 
+- (void)creatLoadingMaskView:(UIView *)view image:(UIImage *)image loadingTitle:(NSString *)loadingTitle isHideTitle:(BOOL)isHideTitle setTimerDelay:(CGFloat)seconds;
+
 /**
 *  关闭定时器
 */
@@ -42,7 +44,7 @@ typedef void(^clickButtonBack)(BOOL select);
  */
 - (void)creatWarnMaskView:(UIView *)view imageName:(NSString *)imageName errorTitle:(NSString *)errorTitle inTheClass:(BOOL)inTheClass;
 
-
+- (void)creatWarnMaskView:(UIView *)view image:(UIImage *)image errorTitle:(NSString *)errorTitle inTheClass:(BOOL)inTheClass;
 
 @end
 
