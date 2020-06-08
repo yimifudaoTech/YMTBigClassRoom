@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setItemId:(NSString *)itemId itemAnswer:(NSString *)itemAnswer optionList:(NSArray *)items countDownTime:(NSTimeInterval)interval result:(YMTAnswerResult)result;
 
-- (void)stopAnswerWithItemId:(NSString *)itemId type:(YMAnswerType)type result:(YMTStopAnswerResult)result;
+- (void)stopAnswer:(YMAnswerType)type result:(YMTStopAnswerResult _Nullable)result;
 
 @end
 
